@@ -1,0 +1,57 @@
+01-变量.html?__hbt=1534729222832:26 undefined
+var myboyfrined = null;
+undefined
+myboyfrined
+null
+var mynvfrined;
+undefined
+mynvfrined
+undefined
+var myaccount = {"xiaohong":50, "xiaoli":3, "xiaohua":0.5}
+undefined
+myaccount
+{xiaohong: 50, xiaoli: 3, xiaohua: 0.5}
+myaccount.xiaosan
+undefined
+myaccount.xiaosan = null
+null
+myaccount
+{xiaohong: 50, xiaoli: 3, xiaohua: 0.5, xiaosan: null}
+myaccount.xiaosan
+null
+myaccount.xiaohong = myaccount.xiaohong + 5;
+55
+myaccount
+{xiaohong: 55, xiaoli: 3, xiaohua: 0.5, xiaosan: null}
+myaccount.xiaosan = "5"
+"5"
+myaccount
+{xiaohong: 55, xiaoli: 3, xiaohua: 0.5, xiaosan: "5"}
+myaccount.xiaosan = myaccount.xiaosan + 5;
+"55"
+myaccount
+{xiaohong: 55, xiaoli: 3, xiaohua: 0.5, xiaosan: "55"}
+parseInt("10")
+10
+parseInt("10") + 5
+15
+"10" + 5
+"105"
+myaccount.xiaosan
+"55"
+parseInt(myaccount.xiaosan) + 5
+60
+myaccount
+{xiaohong: 55, xiaoli: 3, xiaohua: 0.5, xiaosan: "55"}
+myaccount.xiaosan = parseInt(myaccount.xiaosan) + 5
+60
+myaccount
+{xiaohong: 55, xiaoli: 3, xiaohua: 0.5, xiaosan: 60}
+myaccount.xiaohua
+0.5
+myaccount.xiaohua + 1
+1.5
+parseInt(myaccount.xiaohua)
+0
+parseFloat(myaccount.xiaohua)
+0.5

@@ -1,0 +1,28 @@
+var heros = [
+	{
+		"name": "源氏",
+        "role": "突击",
+        "description":"一名致命的半机械忍者，通过他的机械躯体寻得了身心的和谐。"
+	},{
+		"name": "温斯顿",
+        "role": "重装",
+        "description":"一只经过基因改造，拥有高等智慧的大猩猩，也是一位出色的科学家和代表着人类潜力的勇士。"
+	},{
+		"href": "/heroes/reaper",
+        "name": "死神",
+        "role": "突击",
+        "id": "offense",
+        "description":"一名无情的杀手，一直在追杀前守望先锋的特工们。",
+        "overlay": "http://overwatch.nos.netease.com/1/images/v2/home/overlay/reaper.png",
+        "icon": "http://overwatch.nos.netease.com/1/images/heroes/reaper/icon-portrait.png"
+	}
+	
+];
+
+var strHTML = "";
+$.each(heros, function() {
+	strHTML += "姓名：" + this.name + "<br>";
+	strHTML += "角色：" + this["role"] + "<br>";
+	strHTML += "描述：" + this["description"] + "<br>";
+})
+$("#getScriptContent").html(strHTML);

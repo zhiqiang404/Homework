@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<input type="button" name="" id="" value="btn" onclick="function_name()" />
+		<script type="text/javascript">
+			
+			function function_name() {
+				alert('0001');
+				alert('0002');
+				alert('0003');
+				alert('0004');
+			}
+			var add = function () {
+//				console.log(10 + 20);
+				return 10 + 20;
+			}
+			
+			// 带参数的函数
+			var print = function (canshu) {
+				console.log(canshu);
+			}
+			print(10)
+			
+			
+			var a = 10;
+			var b = 3;
+			
+			// 把一个函数的返回值当成另外一个函数的参数
+			var minus = function (x, y) {
+//				console.log(x - y);
+				return x - y;
+			}
+			
+			var double = function (x) {
+//				console.log(x * 2);
+				return x * 2;
+			}
+			double(minus(5, 2))
+			var z = double(double(3));
+			console.log(z);
+			
+			var test = function (arg1, arg2, arg3) {
+				console.log("arg1" + " " + arg1);
+				console.log("arg2" + " " + arg2);
+				console.log("arg3" + " " + arg3);
+			}
+			test(10,20,30);
+			test("aaa", "", "ccc");
+			test("aaa", null, "ccc");
+			
+			var returnFun = function (x) {
+				var y = x * 3;
+				alert(y); // 阻碍下面代码运行
+				return y; // 终止下面代码运行
+				
+				//以下代码不会执行 return
+				alert(y);
+				alert(y);
+				alert(y);
+			}
+			
+			var diff = function (a, b) {
+//				if (a > b) {
+//					return a- b;
+//				}
+//				
+//				return b - a;
+
+//				var diff = (a>b)?(a-b):(b-a);
+//				return diff;
+				
+				return (a>b)?(a-b):(b-a);
+//				variablename = (condition)?value1:value2
+			}
+		</script>
+	</body>
+
+</html>

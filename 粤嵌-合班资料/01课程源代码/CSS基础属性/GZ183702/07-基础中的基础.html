@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html> <!--起始标签-->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--程国栋 栋哥 850127889@qq.com 战网id 15017535877微信-->
+		<!--ctrl + /-->
+		<h1 style="font-size: 12px; color: red;">1标题</h1>
+		<!--/*行间样式表*/-->
+		<h1 style="font-size: 12px; color: red;">1标题</h1>
+		<h2>2标题</h2>
+		<h2>2标题</h2>
+		<h3>3标题</h3>
+		
+		<h4>4标题</h4>
+		<h4>4标题</h4>
+		
+		<h5>标题</h5>
+		<h6>标题</h6>
+		<p>段落</p>
+		<p>段落</p>
+		<!--块级元素 默认换行 默认宽度100% 可以定尺寸-->
+		<div>一块内容</div>
+		
+		<hr />
+		
+		<b>粗                             
+			
+			
+			
+			
+			     体体体体体体体<br />体体体体体体</b>
+		<i>斜体</i>
+		<a href="http://www.sohu.com">百度</a>
+		<!--href属性 = “属性值”-->
+		<img src="img/avatar.jpg"/>
+		<!--行内元素 默认不换行 默认宽度实际占用宽度  自定义尺寸无用-->
+		<span>一行内容</span>
+		
+		<font size="7" color="red" face="微软雅黑">文字</font>
+		<font size="7" color="red" face="微软雅黑">文字</font>
+		
+		<!--css 内容与样式分离-->
+		<style type="text/css">
+			/*内联css*/
+			
+			h2 {
+			/* 标签选择器*/
+				color: blue;
+				font-style: italic;
+			}
+			
+			b {
+				color: lightcoral;
+				background: green;
+				font-weight: normal;
+				font-style: italic;
+				
+				width: 200px;
+				height: 100px;
+				/*行内元素自定义尺寸不起作用*/
+				
+			}
+			i {
+				color: lightcoral;
+				background: green;
+				font-weight: normal;
+				font-style: italic;
+				display: block; /*行内转块级*/
+				
+				width: 200px;
+				height: 100px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="07-test.css"/>
+		
+		
+		<!--emmet-->
+		<!--#header-->
+		<div id="header"></div>
+		
+		<!--div>p-->
+		<div>
+			<p></p>
+		</div>
+		
+		<!--.header>(.left+.right)-->
+		<div class="header">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</body>
+</html><!--结束标签-->

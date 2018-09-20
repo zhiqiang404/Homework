@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<div class="top">
+				<ul class="left">
+					<li><a href="">战网</a></li>
+					<li><a href="">游戏</a></li>
+					<li><a href="">游戏</a></li>
+					<li><a href="">游戏</a></li>
+					<li><a href="">游戏</a></li>
+				</ul>
+				<ul class="right">
+					<li><a href="">游戏</a></li>
+					<li><a href="">游戏</a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			ul, ol, li {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			header {
+				background: #2C0903;
+			}
+			header .top {
+				width: 1200px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			header .left {
+				float: left;
+			}
+			header .right {
+				float: right;
+			}
+			header ul li {
+				float: left;
+				line-height: 40px;
+			}
+			header ul li a {
+				color: white;
+				text-decoration: none;
+				margin-right: 20px;
+			}
+			header ul li:last-of-type a {
+				margin-right: 0px;
+			}
+			
+			header ul.left li:first-of-type a {
+				width: 62px;
+				height: 40px;
+				display: block;
+				text-indent: -999em;
+				background: url(img/icon-sprite.png) no-repeat;
+				background-position: -18px -75px;
+			}
+			header ul.left li:first-of-type a:hover {
+				background-position: -18px -119px;
+			}
+			
+			header ul li:nth-of-type(2) a:after,
+			header ul.left li:nth-of-type(5) a:after {
+				content: '';
+				width: 14px;
+				height: 7px;
+				display: inline-block;
+				background: url(img/icon-sprite.png) no-repeat;
+				background-position: -147px -132px;
+				margin-left: 5px;
+			}
+		</style>
+	</body>
+</html>

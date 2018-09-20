@@ -1,0 +1,62 @@
+.slider {
+    width: 300px;
+    height: ;
+//  background: red;
+    margin: 0 auto;
+    position: relative;
+    
+    .slider-content {
+        img:first-child {
+            position: relative;
+            opacity: 1;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: 100%;
+            vertical-align: middle;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+    }
+    
+    .slider-prev-next {
+        #prev, #next {
+            display: inline-block;
+            background: orange;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            line-height: 24px;
+            height: 24px;
+        }
+        #prev {
+            left: 0;
+        }
+        #next {
+            right: 0;
+        }
+    }
+    
+    .slider-pagination {
+        text-align: center;
+        font-size: 0;
+        position: absolute;
+        bottom: 5px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        i {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+            
+        }
+    }
+}
+

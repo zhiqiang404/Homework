@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+
+    <style>
+        #slideBox{
+            /* width、height应该按照轮播图片的宽度、高度 */
+            width:192px;
+            height:108px;
+            background-color: #ddd;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 轮播最外层的div容器 -->
+        <!-- data-interval：轮播速度 -->
+        <div class="carousel slide" data-ride='carousel' id='slideBox' style='height:300px;'>
+
+            <!-- 轮播下标 -->
+            <ol class='carousel-indicators'>
+                <!-- data-targer:'#slidebox'指向轮播父元素；
+                data-slide-to='0'指向轮播的第几帧 -->
+                <li class='active' data-target="#slideBox" data-slide-to='0'></li>
+                <li data-target="#slideBox" data-slide-to='1'></li>
+                <li data-target="#slideBox" data-slide-to='2'></li>
+            </ol>
+
+            <!-- 装轮播图片的容器 -->
+            <!-- role：为屏幕阅读器准备 -->
+            <div class="carousel-inner" role='listbox'>
+                <!-- 第一张需要active显示 -->
+                <div class="item active">
+                    <img src="lib/img/01.jpg" alt="" class="">
+                    <div class="carousel-caption">
+                        <!-- 轮播文字 -->
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="lib/img/02.jpg" alt="" class="">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="lib/img/03.jpg" alt="" class="">
+                    <div class="carousel-caption">
+                    </div>
+                </div><!-- end carousel-inner -->
+                <!-- 左右控制条 href='#slideBox'指向轮播容器
+                daat-slide='prev'前一帧
+                data-slide='next'后一帧-->
+                <!-- a的href <==> data-target -->
+                <a href="#slideBox" class='left carousel-control' data-slide='prev'>
+                    <span class='glyphicon glyphicon-chevron-left'></span>
+                </a>
+                <a href="#slideBox" class='right carousel-control' data-slide='next'>
+                    <span class='glyphicon glyphicon-chevron-right' ></span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="lib/js/jquery.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+</body>
+
+</html>

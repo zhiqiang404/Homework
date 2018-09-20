@@ -1,0 +1,33 @@
+01-变量.html?__hbt=1534729222832:26 undefined
+typeof "false"
+"string"
+typeof "3.141526535897938463425699378";
+"string"
+typeof 3.141526535897938463425699378
+"number"
+typeof [1,2,3,4]
+"object"
+typeof {name:'John', age:34}
+"object"
+var x = [1,2,3,4]
+undefined
+x
+(4) [1, 2, 3, 4]0: 11: 22: 33: 4length: 4__proto__: Array(0)
+typeof x
+"object"
+1/0
+Infinity
+10/1
+10
+1/0
+Infinity
+0/1
+0
+"z"/1
+NaN
+1 == 1
+true
+"1" == 1
+true
+"1" === 1
+false

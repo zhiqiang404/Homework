@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="tab">
+			<span class="xxx active" style="width: 100px;">boxA</span>
+			<span class="xxx">boxB</span>
+			<span class="xxx">boxC</span>
+			<div class="boxA">boxA</div>
+			<div class="boxB">boxB</div>
+			<div class="boxC">boxC</div>
+		</div>
+
+		<div>ddd</div>
+		<style type="text/css">
+			span {
+				background: red;
+			}
+			
+			span.active {
+				background: orange;
+				border: 1px solid blue;
+			}
+			
+			span.xxx {
+				color: white;
+			}
+			/*span:first-of-type {
+				background: orange;
+			}*/
+			
+			div[class^=box] {
+				width: 100px;
+				height: 100px;
+				background: lightblue;
+				display: none;
+			}
+			
+			div[class^=box].active {
+				display: block;
+			}
+			/*div[class^=box]:first-of-type {
+				display: block;
+			}*/
+		</style>
+
+		<!--<script type="text/javascript">
+			var tab = document.getElementsByClassName('tab')[0];
+//			tab.style.background = 'red';
+			var spans = document.querySelectorAll('.tab span');
+			var boxs = document.querySelectorAll('.tab div');
+			
+			for (var i = 0; i < spans.length; i++) {
+				spans[i].index = i;
+			}
+			
+			for (var i = 0; i < spans.length; i++) {
+				spans[i].onclick = function () {
+					
+					for (var i = 0; i < spans.length; i++) {
+						spans[i].style.background = 'red';
+					}
+					
+					this.style.background = 'orange';
+//					console.log(this.index)
+					
+					for (var i = 0; i < boxs.length; i++) {
+						boxs[i].style.display = 'none';
+					}
+					boxs[this.index].style.display = 'block';
+				}
+			}
+			
+			
+			
+			
+		</script>-->
+
+		<script type="text/javascript">
+			var tab = document.getElementsByClassName('tab')[0];
+			//			tab.style.background = 'red';
+			var spans = document.querySelectorAll('.tab span');
+			var boxs = document.querySelectorAll('.tab div');
+
+			// 给span添加索引
+			for(var i = 0; i < spans.length; i++) {
+				spans[i].index = i;
+			}
+
+			// 给所有span添加点击事件
+			for(var i = 0; i < spans.length; i++) {
+				spans[i].onclick = function() {
+
+					// 所有span删除active状态
+					//					console.log(this.className);
+					//					for (var i = 0; i < spans.length; i++) {
+					//						spans[i].style.background = 'red';
+					//					}
+					for(var i = 0; i < spans.length; i++) {
+						spans[i].className = 'xxx';
+						//						spans[i].removeAttribute('class');
+					}
+
+					//					this.style.background = 'orange';
+					//					this.className = 'xxx active';
+					
+					var classArray = this.className.split(' ');
+					classArray.push('active');
+					this.className = classArray.join(' ');
+					//					console.log(this.index)
+
+					for(var i = 0; i < boxs.length; i++) {
+						boxs[i].style.display = 'none';
+					}
+					boxs[this.index].style.display = 'block';
+				}
+			}
+
+//			adddlert("Welcome guest!");
+			//			try {
+			//				// 要检测的代码
+			//				adddlert("Welcome guest!");
+			//			} catch(err) {
+			//				// 处理错误
+			//				console.log(err.name + ":" + err.message)
+			//			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var cars = ["Saab", "Volvo", "BMW"];
+			cars[3] = 'Benz';
+			cars.length;
+
+			var cars2 = ['Honda', 'Toyota', 'Nissan', 'Subaru'];
+
+			var allCars = cars.concat(cars2);
+
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			//			fruits.fill('Kiwi')
+			//			fruits.fill('Kiwi', 1, 3);
+
+			var ages = [3, 10, 18, 20];
+
+			function checkAdult(age) {
+				return age >= 16;
+			}
+			ages.find(checkAdult);
+			ages.findIndex(checkAdult);
+
+			var numbers = [4, 9, 16, 25];
+
+			function myFunction(item, index) {
+				console.log(index + '/' + item)
+			}
+			numbers.forEach(myFunction);
+			
+			for (var i = 0; i < numbers.length; i++) {
+				console.log(i + '/' + numbers[i]);
+			}
+			
+			console.log(allCars.indexOf('Nissan', 6));
+			console.log(Array.isArray(fruits));
+			var allCarsString = allCars.join();
+			console.log(allCars.join(' '));
+			
+			// 会改变原始数组
+			fruits.push("Kiwi");
+			fruits.unshift('Lemon');
+			// 删除
+			fruits.pop();
+			fruits.shift();
+			
+			var newCars = allCars.slice(2,6);
+			
+//			fruits.splice(1,0,'Kiwi');
+//			fruits.splice(1,1,'Kiwi');
+//			fruits.splice(1,1,'Kiwi','Lemon');
+
+
+//fruits
+//(4) ["Banana", "Orange", "Apple", "Mango"]
+//fruits.indexOf('Apple')
+//2
+//fruits.splice(2,1);
+//["Apple"]
+//fruits
+//(3) ["Banana", "Orange", "Mango"]
+
+fruits.sort()
+allCars.sort()
+
+numbers.sort();
+//numbers.sort(function(a,b){return a-b});
+allCars.reverse();
+		</script>
+	</body>
+
+</html>

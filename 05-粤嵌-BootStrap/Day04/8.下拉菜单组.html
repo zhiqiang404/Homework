@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动监听</title>
+	<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css"/>
+</head>
+<body>
+	<div class="container ">
+		<!-- 显示隐藏效果 -->
+		<button class="btn" data-toggle="collapse" data-target="#abc">显示隐藏</button>
+		<!--
+			第一次进入是隐藏状态  collapse
+			如果是显示状态  collapse in
+		-->
+		<div class="collapse in" id="abc">
+			<ul class="list-group" >
+				<li class="list-group-item"><a href="">列表1nn</a></li>
+				<li class="list-group-item"><a href="">列表1nn</a></li>
+				<li class="list-group-item"><a href="">列表1nn</a></li>
+			</ul>
+		</div>
+		<!-- 手风琴效果 -->
+		<div class="panel-group"   id="laodie">
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<!-- 
+					data-toggle="collapse" 开启插件
+					data-target=""  或 href  指向目标元素
+					data-parent="" 指向和其他collapse共同的祖先元素 
+					-->
+					<a href="#" data-toggle="collapse" data-parent="#laodie" data-target="#one">面板头1</a>
+				</div>
+				<div class=" collapse in"  id="one">
+					<ul class="list-group">
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+					</ul>
+				</div>
+
+			
+				<div class="panel-heading">
+					<a href="#two" data-parent="#laodie"  data-toggle="collapse">面板头2</a>
+				</div>
+				<div class="collapse" id="two">
+					<ul class="list-group">
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+					</ul>
+				</div>
+
+			
+				<div class="panel-heading">
+					<a href="#three" data-parent="#laodie"  data-toggle="collapse">面板头3</a>
+				</div>
+				<div class="collapse" id="three">
+				<ul class="list-group">
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+					</ul>
+				</div>
+			
+				<div class="panel-heading">
+					<a href="#four" data-parent="#laodie"  data-toggle="collapse">面板头4</a>
+				</div>
+				<div class="collapse" id="four">
+				<ul class="list-group">
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+					</ul>
+				</div>
+			
+				<div class="panel-heading">
+					<a href="#five" data-parent="#laodie"  data-toggle="collapse">面板头5</a>
+				</div>
+				<div class="collapse" id="five">
+					<ul class="list-group">
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+						<li class="list-group-item"><a href="">菜单1</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<script type="text/javascript" src="lib/js/jquery.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.js"></script>	
+</body>
+</html>

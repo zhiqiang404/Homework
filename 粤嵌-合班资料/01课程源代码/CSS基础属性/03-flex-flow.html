@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="bigbox">
+			<div class="box" style="background: lightblue; order: 2;">box1</div>
+			<div class="box" style="background: lightcoral; order: 3;">box2</div>
+			<!--<div class="box" style="background: lightgreen; align-self: flex-end;">box3 box3 box3 box3 box3</div>-->
+			<div class="box" style="background: lightgreen; order: 1;">box3 box3 box3 box3 box3</div>
+		</div>
+		<style type="text/css">
+			.bigbox {
+				display: flex;
+
+				width: 500px;
+				height: 200px;
+				background: orange;
+				/*flex-direction: row-reverse;*/
+				flex-wrap: wrap;
+				/*flex-flow: row-reverse wrap;*/
+				
+				flex-wrap: wrap;
+				/*align-content: space-around;*/ /*垂直方向 必须有换行*/
+				
+				/*align-items: flex-start;*/
+				
+				justify-content: flex-start;
+			}
+			.bigbox div {
+				/*flex: 1;*/
+				width: 100px;
+				/*height: 50px;*/
+				
+				
+				/*http://www.github.com/getlantern*/
+			}
+		</style>
+	</body>
+
+</html>

@@ -1,0 +1,37 @@
+var students = ['dong','li','xin']
+undefined
+students
+(3) ["dong", "li", "xin"]0: "dong"1: "li"2: "xin"length: 3__proto__: Array(0)
+var students = [['dong','li','xin']]
+undefined
+students
+[Array(3)]0: (3) ["dong", "li", "xin"]0: "dong"1: "li"2: "xin"length: 3__proto__: Array(0)length: 1__proto__: Array(0)
+students[0][1]
+"li"
+students[0]
+(3) ["dong", "li", "xin"]
+var students = [['dong','li','xin'],["yuan","bin","tao"]];
+undefined
+students
+(2) [Array(3), Array(3)]0: (3) ["dong", "li", "xin"]1: (3) ["yuan", "bin", "tao"]length: 2__proto__: Array(0)
+students[1]
+(3) ["yuan", "bin", "tao"]
+students[1][2]
+"tao"
+var students = {'dong':"yuanxuedong", "qing":"ouyangqing"}
+undefined
+students
+{dong: "yuanxuedong", qing: "ouyangqing"}
+students.qing
+"ouyangqing"
+students["ou-yang"]
+undefined
+students["ou-yang"] = "ouyangqing"
+"ouyangqing"
+students
+{dong: "yuanxuedong", qing: "ouyangqing", ou-yang: "ouyangqing"}dong: "yuanxuedong"ou-yang: "ouyangqing"qing: "ouyangqing"__proto__: Object
+students["ou-yang"]
+"ouyangqing"
+students.ouYang
+undefined
+document.body.style

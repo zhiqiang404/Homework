@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>作业1</title>
+	</head>
+	<body>
+		<form id='form1' method="post">
+			<p><input name="x" type="file" id='imgSend'/></p>
+			<p>用户名：<input type="text" id='username'/></p>
+			<p>密&nbsp&nbsp&nbsp码：<input type="text" id='pwd'/></p>
+			<p>
+				<img src="" id='imgShow' style="width:300px;"/>
+			</p>
+		</form>
+		<script>
+			var imgSend=document.getElementById("imgSend");
+			var usernameInput=document.getElementById("username");
+			var imgShow=document.getElementById("imgShow");
+			
+			var ajax;
+			if(window.XMLHttpRequest){
+				ajax=new XMLHttpRequest;
+			}else if(window.ActiveXObject){
+				ajax=new ActiveXObject();
+			}else{
+				console.log('你的浏览器不支持Ajax');
+			}
+			
+			usernameInput.onkeyup=function(){
+				var username=document.getElementById("username").value;
+				console.log(username);
+				//变量不能写在字符串里面，要不然不会得到解析
+				ajax.open('GET','checkWord.php?name='+username+'');
+				ajax.send();
+				ajax.onreadystatechange=function(){
+					if(ajax.readyState==4&&ajax.status==200){
+						var result=ajax.responseText;
+						if(result==0){
+							//除非是数字内容，要不然一般加字符串
+							document.getElementById("username").style.color='red';
+							document.getElementById("username").value='输入的账户名已经存在';
+						}
+					}
+				}
+			};
+			
+			//上传图片 onload、upload还是 change？change就可以了
+			//如果是本地上传，那么使用webAPI就可以实现预览了
+			/* imgSend.onchange=function(){
+				var url=window.URL.createObjectURL(this.files.item(0));
+				imgShow.src=url;
+			} */
+			
+			imgSend.onchange=function(){
+				var form1=document.getElementById("form1");
+				//利用表单传输文件
+				var data = new FormData(form1);
+				
+				ajax.open('POST',"checkPic.php");
+				//post的四种传输方式:urlencoded(默认),form-data,json,xml
+				ajax.send(data);
+				ajax.onreadystatechange=function(){
+					console.log(2);
+					if(ajax.readyState==4&&ajax.status==200){
+						console.log(3);
+						var result=ajax.responseText;
+						document.getElementById("imgShow").src=result;
+						console.log(result);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

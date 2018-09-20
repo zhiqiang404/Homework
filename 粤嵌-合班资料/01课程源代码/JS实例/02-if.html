@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var r = Math.random();
+			console.log(r);
+			var x = r * 10;
+			console.log(x);
+			var y = Math.floor(x);
+			console.log(y);
+
+			//			if (y === 10) {
+			//				console.log('一等奖')
+			//			} else if (y >= 1 && y <= 3) {
+			//				console.log('二等奖')
+			//			} else {
+			//				console.log('没奖')
+			//			}
+			switch(y) {
+				case 0:
+					console.log('一等奖')
+					break;
+				case 1:
+					console.log('二等奖')
+					break;
+				default:
+					console.log('没奖')
+					break;
+			}
+		</script>
+	</body>
+
+</html>

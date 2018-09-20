@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="slider">
+			<div id="slider-content">
+				<img src="images/1.jpg"/>
+				<img src="images/2.jpg"/>
+				<img src="images/3.jpg"/>
+				<img src="images/4.jpg"/>
+			</div>
+			<div id="slider-prev-next">
+				<span id="prev">prev</span>
+				<span id="next">next</span>
+			</div>
+			<div id="slider-paganation">
+				<i onclick="showImg(1)"></i>
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+		</div>
+		
+		dddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+		
+		<style type="text/css">
+			#slider {
+				width: 400px;
+				margin: 0 auto;
+				position: relative;
+				background: red;
+			}
+			#slider #slider-content {
+				
+			}
+			#slider #slider-content img {
+				max-width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				vertical-align: middle;
+				opacity: 0;
+				transition: all .5s;
+			}
+			#slider #slider-content img:first-child {
+				position: relative;
+				opacity: 1;
+			}
+			#slider #slider-prev-next span {
+				background: orange;
+			}
+			#slider #slider-paganation i {
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				border-radius: 50%;
+				background: orange;
+				font-size: 0;
+			}
+			#slider #slider-paganation i:first-child {
+				background: white;
+			}
+		</style>
+		<script type="text/javascript">
+			var prev = document.getElementById("prev");
+			var next = document.getElementById("next");
+			var slider = document.getElementById("slider");
+			var imgs = slider.getElementsByTagName('img');
+			var items = slider.getElementsByTagName('i');
+			var current = 0;
+			
+			var intImgs = function () {
+				// 初始化所有图片透明度
+				for (var i = 0; i < imgs.length; i++) {
+					imgs[i].style.opacity = '0';
+				}
+			}
+			var intItems = function () {
+				// 取消所有item高亮
+				for (var i = 0; i < items.length; i++) {
+					items[i].style.background = 'orange';
+				}
+			}
+			
+			var nextPic = function () {
+				current++;
+				if (current > imgs.length -1) {
+					current = 0;
+				}
+				console.log(current);
+				intItems();
+				items[current].style.background = 'white'
+				
+//				console.log(current);
+//				imgs[0].style.opacity = '0';
+//				imgs[1].style.opacity = '0';
+//				imgs[2].style.opacity = '0';
+//				imgs[3].style.opacity = '0';
+				intImgs();
+				imgs[current].style.opacity = '1';
+			}
+			
+			var prevPic = function () {
+				current--;
+				if (current < 0) {
+					current = imgs.length - 1;
+				}
+				
+				intItems();
+				items[current].style.background = 'white'
+				
+				console.log(current);
+				intImgs();
+				imgs[current].style.opacity = '1';
+			}
+			
+			
+			
+			
+			next.onclick = function () {
+				nextPic();
+			}
+			
+			prev.onclick = function () {
+				prevPic();
+			}
+			
+			// 给items每项添加一个序号标记
+			for (var h = 0; h < items.length; h++) {
+				items[h].index = h;
+			}
+			
+			for (var j = 0; j < items.length; j++) {
+				items[j].onclick = function () {
+					
+					intItems();
+					this.style.background = 'white';
+					
+					console.log(this.innerText - 1);
+					// 初始化所欲图片透明度
+					intImgs();
+					imgs[this.index].style.opacity = '1';
+				}
+				
+			}
+			
+//			var id = setInterval(function () {
+//				nextPic();
+//			},3000)
+//			
+//			slider.onmouseover = function () {
+//				clearInterval(id);
+//			}
+//			slider.onmouseout = function () {
+//				id = setInterval(function () {
+//					nextPic();
+//				},3000)
+//			}
+			
+		</script>
+	</body>
+</html>

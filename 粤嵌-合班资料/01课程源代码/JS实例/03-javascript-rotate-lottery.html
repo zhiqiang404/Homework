@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+
+	<body>
+		<div id="content">
+			<div id="turntable">
+				<img src="./images/lottery-turntable.png" alt="">
+			</div>
+			<div id="pointer">
+				<img src="./images/lottery-pointer.png" alt="">
+			</div>
+		</div>
+		<style>
+			#content {
+				width: 650px;
+				height: 600px;
+				margin: 0 auto;
+				background: url("./images/lottery-turntable-bg.jpg") no-repeat;
+				position: relative;
+			}
+			
+			#content #turntable {
+				width: 450px;
+				height: 450px;
+				position: absolute;
+				top: 60px;
+				left: 120px;
+				/*transition: all 1s;*/
+				/*transform: rotate(720deg);*/
+			}
+			
+			#content #pointer {
+				width: 174px;
+				height: 228px;
+				position: absolute;
+				top: 150px;
+				left: 255px;
+			}
+		</style>
+
+		<script>
+			var turntable = document.getElementById('turntable');
+			var pointer = document.getElementById('pointer');
+
+			// 抽奖函数 返回抽奖结果
+			var lottery = function() {
+				var randomNumber = Math.floor(Math.random() * 100);
+				// console.log(randomNumber);
+				if(randomNumber < 1) {
+					return {
+						code: 1,
+						text: "一等奖"
+					};
+				} else if(randomNumber < 5) {
+					return {
+						code: 2,
+						text: "二等奖"
+					};
+				} else if(randomNumber < 13) {
+					return {
+						code: 3,
+						text: "三等奖"
+					};
+				} else if(randomNumber < 21) {
+					return {
+						code: 4,
+						text: "四等奖"
+					};
+				} else if(randomNumber < 35) {
+					return {
+						code: 5,
+						text: "五等奖"
+					};
+				} else if(randomNumber < 50) {
+					return {
+						code: 6,
+						text: "六等奖"
+					};
+				} else {
+					return {
+						code: 7,
+						text: "xxxxxxxxxxxxxxxxxxx"
+					};
+				}
+			};
+			
+			// 根据抽奖结果 旋转转盘
+			var rotate = function() {
+				// 加上过渡效果
+				turntable.style.transition = 'all 3s';
+
+				// 执行抽奖函数&把返回的抽奖结果保存到一个变量
+				var x = lottery();
+				console.log(x);
+
+				// 计算出当前应该转的角度
+				var currentAngle = 30 + (360 / 7) * (x.code - 1);
+				turntable.style.transform = 'rotate(' + (currentAngle + 360 * 3) + 'deg)';
+
+				// 等转完之后【悄悄】把角度减去三圈 要先干掉过渡
+				setTimeout(function() {
+					turntable.style.transition = 'all 0s';
+					turntable.style.transform = 'rotate(' + currentAngle + 'deg)';
+					alert(x.text);
+					canClick = true;
+				}, 3000);
+			}
+
+			var canClick = true;
+
+			pointer.onclick = function() {
+				if(canClick === true) {
+					rotate();
+				}
+				canClick = false;
+			}
+		</script>
+	</body>
+
+</html>

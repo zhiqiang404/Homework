@@ -1,0 +1,105 @@
+导航条:
+容器:  navbar
+里面控件功能:  navbar-*
+    导航:  navbar-nav
+    logo: navbar-header>navbar-brand
+    表单:  navbar-form
+    按钮 文本: navbar-btn  navbar-text
+    左右对齐: navbar-left navbar-right
+导航条响应式:
+navbar-headerf
+	->按钮 navbar-toggle 实现响应式 在小屏幕上面显示
+			<button class="navbar-toggle">
+			<i class="icon-bar"></i>
+			<i class="icon-bar"></i>
+			<i class="icon-bar"></i>
+			</button>
+	->要隐藏导航内容添加一个容器:<div class="collapse  navbar-collapse"></div>
+			collapse 隐藏样式
+			navbar-collapse 响应式的显示隐藏
+	->实现collapse 折叠插件:
+		data-toggle="collapse"
+	      data-target="#mubiao"
+
+collapse 折叠插件:
+	data-toggle="collapse"
+	data-target="#mubiao"
+	<div class="collapse" id="mubiao"></div>
+	data-dismiss="alert"
+
+路径导航(面包屑导航  breadcrumb):
+进度条:
+progress-bar 定义进度条 
+progress-bar-success  颜色.
+progress-bar-striped 条纹进度条
+active 开启条纹进度的动画
+
+媒体对象:（图文排版）
+media
+	media-heading
+	media-body
+	media-left
+	media-right
+
+面板:panel
+
+
+插件:plugin
+bootstrap基于jQuery ==> 大于jQuery 1.9
+
+bootstrap 插件使用接口:
+1. 在html使用data-toggle
+
+2. 在js里面通过jquery插件的方式调用 $('xxx').modal();
+
+接口:
+var co=$.fn.collapse.noConflict();//解除了collapse插件命名占用 
+$.fn.chaoXiong=co;//换成chaoXiong
+jquery:调用插件接口   $(element).chaoXiong(参数);
+
+tabindex  当用键盘上面tab键切换位置的的顺序 默认是0
+
+模态框:
+1.  html触发显示模态框  data-toggle="modal" data-target="#myModal  模态框id"
+2. 通过js触发
+	$('#myModal').modal();  //显示 modal('show')
+	$('#myModal').modal('hide');  隐藏
+	$('#myModal').modal('toggle'); 切换
+	$('#myModal').modal({
+		配置项
+		backdrop:true,//是否显示背景
+		keyboard:false,//是否可以用 esc键退出
+		remote:"",//模态框的内容实现远程加载
+	});  配置完成以后显示
+3.自定义事件
+show.bs.modal  一开始显示就触发了这个事件
+shown.bs.modal  准备完成开始显示的时候触发的事件
+
+hide.bs.modal      开始准备隐藏的时候触发的事件
+hidden.bs.modal  隐藏完成以后触发的事件
+
+loaded.bs.modal	从远端的数据源加载完数据之后触发该事件 (等上面remote加载完成以后触发的事件)
+绑定事件:
+$('#myModal').on('show.bs.modal',function(){
+	
+});
+
+
+滚动条样式:
+/*修改滚动条的样式*/
+::-webkit-scrollbar{
+	width:16px;
+	height:1px;
+}
+/* 设置滚动条条的样式*/
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 5px rgba(255,255,255,0.5);
+	background: #535353;
+}
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 5px rgba(100,100,100,0.2);
+	border-radius: 10px;
+	background: #F00;
+}
+

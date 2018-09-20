@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>svg</title>
+    <style>
+        div {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- svg是一个display:inlineblock的元素 -->
+    <!-- viewBox?  -->
+    <svg viewBox="0 0 100 100" width="100" height="100">
+        <!-- 画一个矩形 -->
+        <rect x='0' y='0' width='20' height='80'>
+            <animate
+                attributeType='XML' 
+                attributeName='height' 
+                begin='0'
+                values="20;80;20"
+                dur='0.8s' 
+                repeatCount='indefinite'></animate>
+        </rect>
+        
+        <rect x="40" y='0' width='20' height='80'>
+            <animate 
+            attributeType='XML' 
+            attributeName='height' 
+            begin='0.2'
+            values="20;80;20"
+            dur='0.8s' 
+            repeatCount='indefinite'></animate>
+        </rect>
+        <rect x="80" y='0' width='20' height='80'>
+            <animate 
+            attributeType='XML' 
+            attributeName='height' 
+            begin='0.4'
+            values="20;80;20"
+            dur='0.8s' 
+            repeatCount='indefinite'></animate>
+        </rect>
+
+        <!-- form(parameter[parameter]) to(parameter[parameter]);
+            动画的起点、终点；
+            支持坐标系的坐标-->
+        <!-- 需求实现：一个回归到原点的动画
+            value(0,0;20,20;0,0)，相当于设置关键帧 -->
+        <!-- 动画延迟：begin
+            例：begin(0) begin(2) begin(4)，
+            动画延迟为2s
+            -->
+    </svg>
+
+    <style>
+        /* 整个svg盒子 */
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+        svg rect {
+            fill: orange;
+        }
+    </style>
+
+    <!-- CSS3动画 -->
+    <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+        }
+        .box span{
+            width: 20px;
+            height: 80px;
+            display:block;
+            background-color: orange;
+            float:left;
+            animation:shensuo 0.8s alternate infinite;
+        }
+        .box span:nth-child(1){
+            animation-delay: -0.4s;
+            /* 进入时便已经得到执行，防止卡顿 */
+        }
+        .box span:nth-child(2){
+            margin:0 20px;
+            animation-delay: 0.2s;
+        }
+        .box span:nth-child(3){
+            animation-delay: 0.4s
+        }
+
+        @keyframes shensuo{
+            form{
+                height:20px;
+            }
+            to{
+                height:20px;
+            }
+        }
+    </style>
+
+    <svg viewBox="0 0 100 100" width="500" height="500">
+        <!-- 根据坐标画线(0,0)->(0,100) -->
+        <line x1="0" y1="0" x2='0' y2='100' stroke='black' stroke-width='5'></line>
+
+        <!-- 点状线 -->
+        <line x1="0" y1="10" x2='100' y2='10' stroke='black' stroke-width='5' stroke-dasharray='10 5 5'></line>
+        <line x1="0" y1="10" x2='100' y2='10' stroke='black' stroke-width='5' stroke-dasharray='10 5 5' stroke-dashoffset='20'></line>
+        
+        
+
+
+
+    </svg>
+</body>
+
+</html>

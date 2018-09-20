@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<a href="#">Read Me<i></i></a>
+		
+		<style type="text/css">
+			a {
+				color: white;
+				background: orange;
+				text-decoration: none;
+				/*padding: 20px;*/
+				width: 200px;
+				line-height: 40px;
+				display: block;
+				text-align: center;
+				
+				position: relative;
+				
+				z-index: 1;
+			}
+			/*a:hover {
+				background: #16A667;
+			}*/
+			
+			a i {
+				width: 200px;
+				height: 40px;
+				background: #16A667;
+				display: block;
+				
+				transition: all 1s; 
+				
+				position: absolute;
+				top: 0px;
+				left: 0;
+				
+				z-index: -1;
+			}
+			a:hover i {
+				transform: rotateX(90deg);
+				-webkit-transform: rotateX(90deg);
+			}
+		</style>-->
+		
+		
+		<a href="#">Read Me</a>
+		
+		<style type="text/css">
+			a {
+				color: white;
+				background: orange;
+				text-decoration: none;
+				/*padding: 20px;*/
+				width: 200px;
+				line-height: 40px;
+				display: block;
+				text-align: center;
+				
+				position: relative;
+				
+				z-index: 1;
+			}
+			/*a:hover {
+				background: #16A667;
+			}*/
+			
+			a:after {
+				content: '';
+				
+				width: 200px;
+				height: 40px;
+				background: #16A667;
+				display: block;
+				
+				transition: all .3s; 
+				
+				position: absolute;
+				top: 0px;
+				left: 0;
+				
+				z-index: -1;
+			}
+			a:hover:after {
+				transform: rotateX(90deg);
+				-webkit-transform: rotateX(90deg);
+			}
+		</style>
+	</body>
+</html>

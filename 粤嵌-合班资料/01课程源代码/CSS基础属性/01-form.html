@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="get" autocomplete="on">
+			<input type="text" id="name" name="xingming" value="xingming" />
+			<br />
+			<input type="number" name="age" id="age" value="" />
+			<br />
+			<input type="password" name="password" id="password" value="" placeholder="youxiang"/>
+			<br />
+			<input type="color" name="color" id="" value="" />
+			<br />
+			<input type="image" name="image" id="image" src="img/avatar.jpg" />
+			<br />
+			<input type="file" name="file" id="file" value="" />
+			<br />
+			<input type="email" name="email" id="email" value="" />
+			<br />
+			<input type="date" name="date" id="date" value="" />
+			<br />
+			<input type="checkbox" name="vehicle[]" value="Bike"> 我有一辆自行车<br>
+			<input type="checkbox" name="vehicle[]" value="Car"> 我有一辆小轿车<br>
+			<input type="checkbox" name="vehicle[]" value="Boat"> 我有一艘船<br>
+			<br />
+			<input type="radio" name="sex" id="sex" value="男" />男
+			<input type="radio" name="sex" id="sex" value="女" />女
+			<br />
+			
+			<fieldset>
+				<legend>下拉选项</legend>
+				<select name="fav">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="mercedes">Mercedes</option>
+					<option value="audi" selected="selected">Audi</option>
+				</select>
+				
+				<select name="favcar">
+					<optgroup label="000">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+					</optgroup>
+					<optgroup label="111">
+						<option value="mercedes">Mercedes</option>
+						<option value="audi" selected="selected">Audi</option>
+					</optgroup>
+					
+				</select>
+			</fieldset>
+			
+			<br />
+			
+			<!--<label><input type="radio" name="sex" id="sex1" value="男" />男</label>
+			<label><input type="radio" name="sex" id="sex2" value="女" />女</label>-->
+			<br />
+			
+			<input type="radio" name="sex" id="sex1" value="男" />
+			<label for="sex1">男</label>
+			<input type="radio" name="sex" id="sex2" value="女" />
+			<label for="sex2">女</label>
+			
+			<textarea cols="6" rows="3" autofocus="autofocus" placeholder="请输入留言"></textarea>
+			<br />
+			
+			
+			<input list="browsers">
+ 
+			<datalist id="browsers">
+			  <option value="Internet Explorer">
+			  <option value="Firefox">
+			  <option value="Chrome">
+			  <option value="Opera">
+			  <option value="Safari">
+			</datalist>
+			
+			
+			<input type="submit" value="btn"/>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ajax初体验</title>
+	</head>
+	<body>
+		<button id="btn">发起一个Ajax请求</button>
+		<script>
+			var btn=document.getElementById("btn");
+			var ajax=null;
+			/* 
+			 1、安装浏览器
+			 2、地址栏输入网址，“发送”关键词
+			 3、结果返回
+			 */
+			
+			/* 1、创建ajax */
+			if(window.XMLHttpRequest){
+				ajax=new XMLHttpRequest();
+			}else if(window.ActiveXObject()){
+				ajax=new ActiveXObject();
+			}else{
+				console.log("浏览器不支持Ajax");
+			}
+			btn.onclick=function(){
+				console.log('run');
+				/* 2.编辑要发送的字符串 */
+				ajax.open('GET','ajaxGET.php?name=zhiqiang');
+				/* 3.发送 */
+				ajax.send();
+				
+				ajax.onreadystatechange=function(){
+					if(ajax.readyState==4 && ajax.status==200){
+						var result=ajax.responseText;
+						console.log(result);
+					}
+				}
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var ageCalculate = function (obj) {
+//				console.log(obj.birth);
+//				var d = new Date();
+//				var dTime = d.getTime();
+//				var b = new Date(obj.birth);
+//				var bTime = b.getTime();
+//				
+//				var tem = dTime - bTime;
+//				var age = Math.floor(tem/1000/60/60/24/365);
+//				
+//				console.log(age);
+//			}
+//			ageCalculate(firstGrilFriend);
+//			ageCalculate(secondGrilFriend);
+
+			var ageCalculate = function () {
+//				console.log(this.birth);
+				var d = new Date();
+				var dTime = d.getTime();
+				var b = new Date(this.birth);
+				var bTime = b.getTime();
+				
+				var tem = dTime - bTime;
+				var age = Math.floor(tem/1000/60/60/24/365);
+				
+				return age;
+			}
+			// firstGrilFriend.age()
+			// secondGrilFriend.age()
+			
+			
+			var firstGrilFriend = {
+				name: 'xiaohong',
+				birth: '1995,8,2',
+				height: 160,
+				age: ageCalculate
+			}
+			var secondGrilFriend = {
+				name: 'xiaoli',
+				birth: '1980,4,1',
+				height: 145,
+				age:ageCalculate
+			}
+			
+			
+			// 面向对象
+			var GrilFriend = function (name, birth, height) {
+				this.name = name;
+				this.birth = birth;
+				this.height = height;
+				this.age = ageCalculate;
+//				this.greeting = function () {
+//					console.log('hello' + ' ' + this.name);
+//				}
+				
+			}
+			//构造函数 每一次调用都会返回一个新的对象 对象里面的键值对通过this.xxx = 'xxxxvalue'
+			
+			// 构造函数实例化
+			var thirdGrilFriend = new GrilFriend('xiaosan','1996,3,3',165);
+			var fourthGrilFriend = new GrilFriend('xiaolv', '2000,12,20', 158);
+			
+			// 给第三个 增加一个打招呼的函数
+//			thirdGrilFriend.greeting = function () {
+//				console.log('hello' + ' ' + this.name);
+//			}
+			
+			// 通过原型链追加方法
+			GrilFriend.prototype.greeting = function () {
+				console.log('hello' + ' ' + this.name);
+			}
+			
+			
+			// 计数器
+			var x = {
+				count: 0,
+				add: function () {
+					return this.count += 1;
+				}
+			}
+			var y = {
+				count: 50,
+				add: function () {
+					return this.count += 1;
+				}
+			}
+			
+//			var add = function () {
+//				this.count += 1;
+//			}
+
+
+			// 用构造函数写
+			var Count = function (count) {
+				this.count = count;
+			}
+			
+			var a = new Count(10);
+			var b = new Count(0);
+			
+			
+			Count.prototype.add = function () {
+				return this.count += 1;
+			}
+
+
+			var myArray = new Array();
+			var myArray = new Array(1,2,3,4);
+			var myArray = new Array(4);
+			
+			// 面向对象写计数器
+		</script>
+	</body>
+</html>

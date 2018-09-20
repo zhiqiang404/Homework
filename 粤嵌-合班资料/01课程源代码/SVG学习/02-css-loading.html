@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+</div>
+<style>
+    .box {
+        font-size: 0;
+    }
+
+    .box span {
+        width: 5px;
+        height: 20px;
+        display: inline-block;
+        background: orange;
+        /*font-size: 12px;*/
+        animation: move 0.2s linear infinite alternate;
+    }
+    .box span:nth-child(1) {
+        animation-delay: 0;
+    }
+    .box span:nth-child(2) {
+        margin: 0 5px;
+        animation-delay: 0.1s;
+    }
+    .box span:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+    @keyframes move {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(20px);
+        }
+    }
+</style>
+</body>
+</html>

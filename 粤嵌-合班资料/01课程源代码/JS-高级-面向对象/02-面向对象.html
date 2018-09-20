@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<style type="text/css">
+			img {
+				position: absolute;
+			}
+		</style>
+		<!--<script type="text/javascript">
+			var imgNode = document.createElement('img');
+			imgNode.src = 'img/car1.png';
+			imgNode.style.top = 0;
+			imgNode.style.left = 50 + 'px';
+			document.body.appendChild(imgNode);
+
+
+			var imgNode2 = document.createElement('img');
+			imgNode2.src = 'img/car2.png';
+			imgNode2.style.top = 0;
+			imgNode2.style.left = 100 + 'px';
+			document.body.appendChild(imgNode2);
+			
+			var moveRight = function () {
+				imgNode.style.left = parseInt(imgNode.style.left) + 10 + 'px';
+			}
+			
+			setInterval(function () {
+//				moveRight();
+			},300)
+		</script>-->
+
+		<script type="text/javascript">
+			// 构造函数
+			var Car = function(x, y, imgSrc) {
+				this.x = x;
+				this.y = y;
+				this.imgSrc = imgSrc || 'img/car.png';
+				
+				// 方法
+				this.draw = function() {
+					this.imgNode = document.createElement('img');
+					this.imgNode.src = this.imgSrc;
+					this.imgNode.style.top = this.y + 'px';
+					this.imgNode.style.left = this.x + 'px';
+					document.body.appendChild(this.imgNode);
+				}
+
+			}
+
+			// 每一次调用构造函数会生成 一个对象
+
+			var tesela = new Car(0, 0);
+			tesela.draw();
+			
+			var nissan = new Car(50, 50);
+			nissan.draw();
+	
+			Car.prototype.move = function () {
+				this.imgNode.style.left = parseInt(this.imgNode.style.left) + 10 + 'px';
+			}
+			
+//			setInterval(function () {
+//				tesela.move();
+//				nissan.move();
+//			},300)
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉菜单</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <style>
+        .sanjiao {
+            width: 100px;
+            height: 100px;
+            /* border-top:50px solid #000; */
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid blue;
+            border-left: 50px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div.btn-group>button>span+ul>li*4 -->
+    <!-- 是所有的组件都需要被当前的 x-group包裹才能生效吗？ -->
+    <div class="btn-group dropup" style='margin-top:100px;'><button class="btn btn-default dropdown-toggle" data-toggle='dropdown'>下拉菜单<span
+                class='caret'></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">001</a></li>
+            <li><a href="#">002</a></li>
+            <li><a href="#">003</a></li>
+            <li><a href="#">004</a></li>
+        </ul>
+    </div>
+
+    <div class="sanjiao"></div>
+
+    <!-- 下拉菜单 -->
+    <!-- x.dropdown>(x.dropdown-toggle[data-toggle='dropdown'])+ul.dropdown-menu>(li>a) -->
+    <!-- 部件名>启用部件+部件主体 -->
+
+    <!-- 选项卡导航 -->
+    <!-- div.nav.nav-tabs>(li>a)*4 -->
+    <!-- 其他种类的类似结构都是以‘li’为对象的吗？ -->
+    <div class="nav nav-tabs">
+        <li><a href="#">001</a></li>
+        <li><a href="#">002</a></li>
+        <li><a href="#">003</a></li>
+        <li><a href="#">004</a></li>
+    </div>
+
+    <!-- 胶囊导航 -->
+    <!-- div.nav.nav-pills>(li>a)*4 -->
+    <div class="nav nav-pills">
+        <li class='active'><a href="#">001</a></li>
+        <li><a href="#">001</a></li>
+        <li><a href="#">001</a></li>
+        <li class='disabled'><a href="#">001</a></li>
+    </div>
+
+    <!-- 自适应导航 nav-justified(适应了) -->
+    <div class="nav nav-pills nav-justified">
+        <li><a href="#">001</a></li>
+        <li><a href="#">002</a></li>
+        <li><a href="#">003</a></li>
+        <li><a href="#">004</a></li>
+    </div>
+
+    <div class='dropdown''>
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            按钮
+        </button>
+        <ul class="dropdown-menu">
+                <li><a href="#">001</a></li>
+                <li><a href="#">002</a></li>
+                <li><a href="#">003</a></li>
+                <li><a href="#">004</a></li>
+            </ul>
+    </div>
+
+    <!-- 二级导航 -->
+    <div class="nav nav-pills">
+        <li><a href="#">001</a></li>
+        <!-- 下拉菜单 -->
+        <li class='dropdown'>
+            <a href="#" class='dropdown-toggle' data-toggle='dropdown'>002
+                <!-- <span class="caret"></span> -->
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">001</a></li>
+                <li><a href="#">002</a></li>
+                <li><a href="#">003</a></li>
+                <li><a href="#">004</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">003</a></li>
+    </div>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <li><a href="#">001</a></li>
+        <li><a href="#">002</a></li>
+        <li><a href="#">003</a></li>
+        <li class='active'><a href="#">ssgagag004</a></li>
+    </div>
+
+    <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+</body>
+
+</html>

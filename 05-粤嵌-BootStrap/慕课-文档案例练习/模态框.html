@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模态框</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+</head>
+
+<body>
+    <!-- div.modal>div.modal-dialog.modal-content>div.modal-header+div.modal-body+div.modal-footer-->
+
+    <!-- show方式展示模态框 -->
+    <!-- <div class="modal show">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal">&times;</span>
+                    <h4 class="modal-title">标题</h4>
+                </div>
+                <div class="modal-body">身体</div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button">保存</button>
+                    <button class="btn btn-info" type="button">取消</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- 点击按钮方式触发模态框 -->
+    <!-- 添加淡入动画 fade -->
+    <button class="btn btn-default" data-toggle="modal" data-target="#one">点击我</button>
+    <div class="modal modal-default fade" id="one">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">标题</div>
+                <div class="modal-body">内容</div>
+                <div class="modal-footer">尾部</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 通过jQuery触发模态框 -->
+    <button class="btn btn-default" id="btn">点击我</button>
+    <div class="modal modal-default fade" id='two'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">头部</div>
+                <div class="modal-body">身体</div>
+                <div class="modal-footer">尾部</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+    <script>
+        $('#btn').click(function(){
+            $('#two').modal('toggle');
+        })
+    
+    </script>
+
+
+    <div class="one">
+        <div class="two">
+            <div class="three"></div>
+        </div>
+    </div>
+</body>
+
+</html>

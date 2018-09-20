@@ -1,0 +1,5 @@
+h4 {
+	color: green;
+	background: red;
+	display: inline; /*块级转行内*/
+}

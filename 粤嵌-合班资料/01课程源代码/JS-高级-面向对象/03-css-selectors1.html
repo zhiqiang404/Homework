@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="GET">
+        <input type="text" disabled name="" id="" value="nicholas">
+        <input type="text" name="" id="" value="nick" readonly>
+        <input type="range" name="" id="">
+        <input type="number" min="10" max="50" name="" value="30" id="" required>
+
+        <input type="radio" name="sex" id="sex1">
+        <input type="radio" name="sex" id="sex2">
+
+        <input type="checkbox" id="job1">
+        <input type="checkbox" id="job2">
+        <input type="checkbox" id="job3">
+
+        <input type="email">
+
+        <input type="submit" value="tijiao">
+    </form>
+
+    <style>
+        /* input:enabled {
+            background: red;
+        } */
+        input:disabled {
+            background: yellow;
+        }
+
+        input:checked {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* input {
+            border: 10px solid black;
+        } */
+        input:out-of-range {
+            border: 10px solid red;
+        }
+
+        input:in-range {
+            border: 10px solid yellow;
+        }
+
+        /* input:required {
+            background: orange;
+        } */
+
+        input:required + :after {
+            content: '*必填';
+        }
+
+        input:valid {
+            background: lightgreen;
+        }
+        input:invalid {
+            background: red;
+        }
+    </style>
+</body>
+
+</html>

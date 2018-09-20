@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+  <style>
+    img {
+      width: 200px;
+    }
+  </style>
+  <div class="demo"></div>
+  <img src="" alt="">
+  <script>
+    var pagenum = 1;
+
+    function getdate() {
+
+      // $.get("https://www.apiopen.top/meituApi?page=1",
+      $.get("https://www.apiopen.top/meituApi", {
+          'page': pagenum,
+        },
+        function (shuju, textStatus, xhr) {
+          console.log(shuju);
+          // console.log(textStatus);
+          // console.log(xhr);
+          var x = shuju;
+          $.each(x.data, function (index, item) {
+            // console.log(item.url)
+            $('.demo').append('<img src="' + item.url + '">');
+          })
+        },
+      );
+      pagenum++;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<div class="top">
+				<ul class="left">
+					<li><a href="">战网</a></li>
+					<li><a href="">游戏</a>
+						<div class="subnav">
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+						</div>
+					</li>
+					<li><a href="">游戏</a></li>
+					<li><a href="">游戏</a></li>
+					<li><a href="">游戏</a></li>
+				</ul>
+				<ul class="right">
+					<li><a href="">游戏</a></li>
+					<li><a href="">游戏</a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			ul, ol, li {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			header {
+				background: #2C0903;
+				position: relative;
+			}
+			header .top {
+				width: 1200px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			header .left {
+				float: left;
+			}
+			header .right {
+				float: right;
+			}
+			header ul li {
+				float: left;
+				line-height: 40px;
+			}
+			header ul li a {
+				color: white;
+				text-decoration: none;
+				margin-right: 20px;
+			}
+			header ul li:last-of-type a {
+				margin-right: 0px;
+			}
+			
+			header ul.left li:first-of-type a {
+				width: 62px;
+				height: 40px;
+				display: block;
+				text-indent: -999em;
+				background: url(img/icon-sprite.png) no-repeat;
+				background-position: -18px -75px;
+			}
+			header ul.left li:first-of-type a:hover {
+				background-position: -18px -119px;
+			}
+			
+			header ul li:nth-of-type(2)>a:after,
+			header ul.left li:nth-of-type(5)>a:after {
+				content: '';
+				width: 14px;
+				height: 7px;
+				display: inline-block;
+				background: url(img/icon-sprite.png) no-repeat;
+				background-position: -147px -132px;
+				margin-left: 5px;
+			}
+			
+			/**/
+			
+			header ul li .subnav {
+				position: absolute;
+				top: 40px;
+				left: 0;
+				background: rgba(21,26,35,.95);
+				
+				width: 100%;
+				height: ;
+				text-align: center;
+				
+				padding: 30px 0;
+				border: 1px solid red;
+				box-sizing: border-box;
+			}
+			header ul li .subnav a {
+				width: 180px;
+				height: 180px;
+				display: inline-block;
+				background-image: url(img/card-hearthstone-CN-538b49564ab2122a.jpg);
+				background-size: cover;
+				background-position: center;
+			}
+			
+			header ul li .subnav a:nth-of-type(2) {
+				background-image: url(img/card-overwatch-CN-85c98611cefd3018.jpg);
+			}
+			header ul li .subnav a:nth-of-type(3) {
+				background-image: url(img/card-world-of-warcraft-CN-c4bebe45e5af0993.jpg);
+			}
+		</style>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var i = 0;
+			for (; i < 3; i++) {
+//				debugger;
+				console.log('i' + i)
+			}
+			
+			var myArray = ['aaa', 'bbb', 'ccc'];
+//			myArray[0].toUpperCase()
+//			console.log(myArray[0]);
+//			console.log(myArray[1]);
+//			console.log(myArray[2]);
+
+			for (var j = 0; j < myArray.length; j++) {
+				myArray[j] = myArray[j].toLocaleUpperCase()
+				console.log(myArray[j]);
+			}
+			
+			var person={fname:"John",age:25,lname:"Doe"};
+			
+			for (x in person) {
+				console.log(x);
+				console.log(person[x]);
+			}
+		</script>
+	</body>
+</html>

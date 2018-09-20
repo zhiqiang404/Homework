@@ -1,0 +1,131 @@
+﻿pull 拉  往左边移动（通过相对定位实现 参考自己）
+col-md-pull-1 ==>  距离左边一列(相对定位)
+pull-right  ==>float:right; 特殊
+
+push 推 往右移动(通过相对定位实现 参考也是自己)
+col-md-push-1  
+col-xs-push-12
+
+位置偏移:(通过margin实现)
+col-md-offset-1
+
+辅助类: 
+	隐藏:
+	hidden-lg
+	hidden-md
+	hidden-sm
+	hidden-xs
+	文本对齐:
+	text-left
+	text-right
+	text-center
+	text-justify  两端对齐
+	text-nowrap 显示在一行(word-break:break-all; 强制换行)
+	文本颜色:
+	text-dander
+	text-success
+	....
+	背景颜色:
+	bg-success
+	...
+	关闭按钮:
+			<button class="close" style="float:left"><span>&times;</span></button>
+	三角形:
+	<span class="caret"></span>
+<pre></pre> 保留输入标签的格式 (preview  预览)
+
+表格:
+table  表格基本样式
+table-striped  斑马线（条纹状）样式
+table-bordered  带边框的表格
+table-hover  鼠标移动上去样式
+table-condensed 紧凑表格(内间距会减半)
+
+
+状态颜色:
+success 绿色
+danger   红色
+warning  橙色
+info          蓝色
+active     活动样式(#ddd  灰色)
+
+响应式表格:
+在表格外面添加一个容器 容器的样式为 table-responsive
+
+表单:
+	form-group  表单组
+	form-control 表单控件样式(input  select  textarea  输入框)
+	checkbox radio  多选或单选框的结构
+		lable
+			input   text
+	btn 按钮(button)
+		<input type='"submit'/>  h5=><button type="submit">提交按钮</button>
+		<input type='"reset'/>     h5=><button type="reset">提交按钮</button>
+		<input type='"button'/>   h5=><button type="button">提交按钮</button>
+		按钮样式:
+		btn
+		btn-danger  颜色 btn-warning btn-info btn-success
+		btn-sm  大小 btn-lg btn-xs
+		active 激活状态
+		disabled 禁用
+	a 标签页可以作为按钮使用
+	一般情况 输入表单都需要有个label作为说明 ,如果不想要显示 可以隐藏(  sr-only)
+	辅助 屏幕阅读器:
+		aria-*
+		role  角色
+		 sr-only
+
+form标签的样式: 
+form-inline  内联表单 所有表单控件现在同一行
+form-horizontal 表单里面的控件水平排列
+	<lable class="col-sm-xxx control-label"></label>
+	<div class="col-sm-xxx">
+		<input />
+  	</div>
+ 禁用状态  disbaled
+ 只读状态  readyonly
+ 禁用  fieldset  
+ fieldset  表单组 (多个表单控件形成一个组)
+ <fieldset>
+ 	<legend>表单组的舒勇文字</legend>
+ </fieldset>
+ 状态:  form-group 上面添加样式  has-error  has-warning  has-success
+ 状态图标:  
+	 在form-group上添加 has-feedback
+	 在图标 上添加 form-control-feedback
+尺寸大小 input-sm  input-lg  input-xs	 
+输入框组:
+<div class="input-group">
+	<span class="input-group-addon">￥</span>
+	<input type="text" class="form-control" />
+	<span class="input-group-addon">元</span>
+</div>
+
+ 字体操作:
+ html4里面 无法自定义字体(客户端有什么字体 网页只能显示什么字体)
+ html5里面 允许远程加载字体@font-face{}
+ html5里面一些常见图标做成字体 调用字体就可以显示图标;
+ Glyphicon Halflings   字体图标
+ Font Awesome  字体图标库
+ fonts  文件夹不能丢 也不能乱放;
+
+ 一般用span标签 加图标样式
+ <span class="glyphicon glyphicon-cloud"></span>
+
+图片样式:
+img-rounded  圆角
+img-circle  圆形显示
+img-thumbnail 缩略图
+
+
+
+module 模块
+plugin 插件
+commpont 组件
+addon 挂件 修饰键
+
+组件:（独立完成功能一组模块 commpont）
+
+data-toggle 指定组件或插件 使用时用bootstrap什么功能
+
+data-target 指向功能实现的目标(用id)

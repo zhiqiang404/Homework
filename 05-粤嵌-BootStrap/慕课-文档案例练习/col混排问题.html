@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>col混排问题</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <style>
+        div{
+            background-color: royalblue;
+            height: 200px;
+        }
+        div>div{
+            background-color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- sm：768~992; md:992~1200 -->
+        <!-- <div class="col-sm-6 col-md-1"></div> -->
+        <div class="col-md-1 col-sm-6"></div>
+    </div>
+</body>
+</html>

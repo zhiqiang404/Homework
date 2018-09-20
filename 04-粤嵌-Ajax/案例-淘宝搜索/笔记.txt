@@ -1,0 +1,103 @@
+﻿https://suggest.taobao.com/sug?code=utf-8&_ksTS=1505092846181_524&callback=jsonp525&k=1&area=c2c&bucketid=10&q=hello
+
+q=hello 
+
+q=关键字
+
+https://suggest.taobao.com/sug?callback=jsonp525&q=猫
+
+https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=a&cb=jQuery110204350402898946186_1534733855510
+
+https://www.baidu.com/s?wd=ss
+
+AJAX:  异步javascript  和 xml
+
+谷歌 或 火狐浏览器 XMLHttpRequest();
+IE  ActiveXObject;
+vue.js  axios(ajax)
+jquery=>ajax
+open();
+send();
+ajax.onreadystatechange=function(){
+	ajax.readyState (0-4)
+	ajax.status  (http协议状态码)
+}
+
+xml: extensible markup language 可扩展标记语言 作用:标记数据 用来跨语言跨服务传递数据
+结构清晰.解析比较复杂,表示的数据量比较多
+
+<?xml version="1.0" encoding="utf-8" ?> xml文档声明
+<users>
+	<u>数据</u>
+	<U></U>
+	<user name="何英祥"/>
+</users>
+解析:javascript  它解析的方式和Html是一样  dom(解析)
+xxx.getElementById('xx');
+
+json: javascript object notation （javascript对象标记） 轻量级数组交换格式
+在javascript里面  []表示数组  {}表示对象
+[1,2,3,4]  数组
+{name:"何英祥",age:20}  ==>名值对
+
+[
+	{name:"",age:""},
+	{name:"",age:""},
+	{name:"",age:""},
+]
+
+[
+	{name:"",price:"",num:"11"},
+	{name:"",price:"",num:"11"},
+	{name:"",price:"",num:"11"},
+]
+
+jsonp:跨域ajax(在ajax里面默认不允许跨域访问[http协议  域名  端口 其中有一个不相同就可以看做是跨域] )
+1.配置服务器端(不安全)
+在http协议的响应头:  php=>header('Access-Control-Allow-Orign:*');
+2.jsonp 
+ajax默认不允许跨域，但是html里面有一些标签 是允许跨域调用
+<link rel="stylesheet" href="http://www.yq.com/common.css"/>
+<script src="http://jquery.com/aa.js"></script>
+<img src="http://baidu.com/hello.jpg"/>
+<iframe src="http://sina.com/index.html"></iframe>
+
+=>使用jsonp
+本地：
+<script>
+<!-- 回调 -->
+	function sayJsonp(p1,p2){
+
+	}
+</script>
+<script src="远程服务器调用地址">
+	sayJsonp('参数','参数2');
+</script>
+jquery:ajax扩展
+
+$.ajax({
+	url:"", //请求地址
+	type:"", //get  post 请求方式  request  type
+	data:"",//请求的数据  写法 : name=zhangsan&age=20 或  {name:"zhagnsan",age:20}
+	dataType:"",//请求成功返回数据格式  xml  json  text  html javascript.jsonp.[ 真实返回 xml  text]
+	success:function(responsedata){
+		//请求成功执行的函数（responsedata  服务器返回数据）
+	},
+	error:function(xhr,error,exception){
+
+	}，
+	complete:function(xhr,textstatus){
+
+	}
+});
+快捷写法  简写
+$.get('url',{},function(data){},'json');
+$.post('url',{},function(data){},'json');
+==>$.get('url',{},function(data){},'json');==>快捷写法
+$.getJSON('url',{},function(){});  get传值 获取的是json数据格式
+
+获取表单数据:
+serialize();  //用字符串的形式(get传值的格式)获取表单数据
+serializeArray(); //获取整个表单数据 把数组组装成json格式
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="left">left</div>
+			<div class="middle">middle</div>
+			<div class="right">right</div>
+			<!--<div class="clear"></div>-->
+		</div>
+		<div class="box2">box2</div>
+		
+		<style type="text/css">
+			.bigbox {
+				width: 500px;
+				/*height: 200px;*/
+				background: orange;
+				overflow: hidden;/*超出隐藏*/
+				margin-left:auto ; /*外边距*/
+				margin-right:auto ; /*块级元素居中 左右外边距auto*/
+			}
+			.left {
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+			}
+			.middle {
+				width: 100px;
+				height: 150px;
+				background: blue;
+				float: left;
+				/*clear: both;*/
+			}
+			.right {
+				width: 100px;
+				height: 100px;
+				background: green;
+				float: right;
+				/*clear: left;*/
+			}
+			.clear {
+				clear: both;
+			}
+			.box2 {
+				clear: both;
+			}
+			
+			/*
+			 *子元素浮动引起的父元素高度丢失
+			 * 1. 直接给父元素高度
+			 * 2. 清除浮动 clear
+			 * 3. 父元素设置超出隐藏
+			 */
+		</style>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<label>
+			<input type="checkbox" name="" id="" value="" />
+			<i class="bg"><i class="btn"></i></i>
+			
+		</label>
+		<style type="text/css">
+			i.bg {
+				width: 60px;
+				height: 30px;
+				display: block;
+				background: lightgray;
+				overflow: hidden;
+				border-radius: 30px;
+				transition: all .3s;
+			}
+			.btn {
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: red;
+				margin: 5px;
+				
+				transition: all .3s;
+				position: relative;
+				top: 0;
+				left: 0px;
+				
+				border-radius: 50%;
+			}
+			input {
+				display: none;
+			}
+			input:checked+i.bg i.btn {
+				left: 30px;
+			}
+			input:checked+i.bg {
+				background: #008000;
+			}
+		</style>
+	</body>
+</html>

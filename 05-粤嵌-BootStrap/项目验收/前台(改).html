@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前台</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <style>
+        .btn-info {
+            background-color: rgb(51, 55, 59);
+            border-color: rgb(51, 55, 59);
+            width: 100%;
+            float: right;
+        }
+        .form-horizontal {
+            /* width:750px;
+            height:500px; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40px 15px;
+            border: 1px solid rgba(51, 55, 59,0.5);
+            border-radius: 3px;
+            box-shadow: 0px 0px 15px 3px #ddd;
+        }
+        .form-group {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .madal{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form-horizontal text-center" id='loginForm'>
+        <!-- 一个组内的，给需要水平分布的分别分区 -->
+        <div class="form-group">
+            <h3 class='text-center' style='margin-top:10px'>登陆管理后台</h3>
+        </div>
+        <!-- 账户 -->
+        <div class="form-group ">
+            <!-- 用offset才能实现推动整行，push是absolute -->
+            <label for="" class="control-label col-md-2 col-md-offset-2 hidden-xs">账户</label>
+            <div class="col-md-6 has-feedback ">
+                <input type="text" class="form-control" placeholder="请输入用户名" data-toggle="tooltip"
+                data-placement='top' title='took' name='username'>
+                    <span class='glyphicon glyphicon-user form-control-feedback'></span>
+                </div>
+            </div>
+            <!-- 密码 -->
+            <div class="form-group ">
+                <label for=" " class="col-md-2 control-label col-md-offset-2 hidden-xs ">密码</label>
+                <div class="col-md-6 has-feedback ">
+                    <input type="text " class="form-control " placeholder="请输入密码 " 
+                    data-toggle="tooltip" data-placement='top' name='password'>
+                <span class='glyphicon glyphicon-lock form-control-feedback'></span>
+            </div>
+        </div>
+        <!-- 验证码 -->
+        <div class="form-group ">
+            <label for=" " class="control-label col-md-2 col-md-offset-2 hidden-xs">验证码</label>
+            <div class="col-md-4 col-sm-2">
+                <input type="text " class="form-control" placeholder="请输入验证码 "data-toggle="tooltip"
+                data-placement='top' name='vcode'/>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <img src="lib/img/vcode.png" alt="" class="form-control">
+            </div>
+        </div>
+
+        <div class="from-group">
+            <div class="col-md-2 col-md-offset-2" style='height:20px;'></div>
+            <div class="col-md-3">
+                <button class="btn btn-info" 
+                style='background-color: #fff;color:rgb(51, 55, 59);margin-bottom: 10px;'>
+                登陆</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-info" type="reset">清空</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="modal fade">
+        <div class="modal-dialo" style='position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);'>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/js/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="lib/js/login.js"></script>
+    
+</body>
+
+</html>

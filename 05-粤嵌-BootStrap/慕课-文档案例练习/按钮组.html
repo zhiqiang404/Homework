@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按钮组</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+</head>
+
+<body>
+    <!-- 普通下拉菜单 -->
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            普通下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">001</a></li>
+            <li><a href="#">002</a></li>
+            <li><a href="#">003</a></li>
+        </ul>
+    </div>
+
+    <!-- 按钮组下拉菜单 -->
+    <div class="btn-group">
+        <button class="btn btn-default" type="button">001</button>
+        <button class="btn btn-default" type="button">002</button>
+        <button class="btn btn-default" type="button">003</button>
+        <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" data-toggle='dropdown'>
+                004
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">001</a></li>
+                <li><a href="#">002</a></li>
+                <li><a href="#">003</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+</body>
+
+</html>

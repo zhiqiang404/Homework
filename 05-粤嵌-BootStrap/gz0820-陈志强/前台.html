@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前台</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <style>
+        .btn-info {
+            background-color: rgb(51, 55, 59);
+            border-color: rgb(51, 55, 59);
+            width:165px;
+            float:right;
+        }
+        
+    </style>
+</head>
+
+<body>
+        <!-- <h3 class='text-center'>登陆管理后台</h3> -->
+        <form class="form-horizontal">
+            <!-- 一个组内的，给需要水平分布的分别分区 -->
+            <div class="form-group">
+                <h3 class='text-center'>登陆管理后台</h3>
+            </div>
+            <!-- 账户 -->
+            <div class="form-group ">
+                <!-- 用offset才能实现推动整行，push是absolute -->
+                <label for="" class="col-md-1 col-md-offset-3 control-label hidden-xs">账户</label>
+                <div class="col-md-5 has-feedback ">
+                    <input type="text" class="form-control" placeholder="请输入用户名" ">
+                    <span class='glyphicon glyphicon-user form-control-feedback'></span>
+                </div>
+            </div>
+            <!-- 密码 -->
+            <div class="form-group ">
+                <!-- 用offset才能实现推动整行，push是absolute -->
+                <label for=" " class="col-md-1 col-md-offset-3 control-label hidden-xs">密码</label>
+                <div class="col-md-5 has-feedback ">
+                    <input type="text " class="form-control " placeholder="请输入密码 " ">
+                    <span class='glyphicon glyphicon-lock form-control-feedback'></span>
+                </div>
+            </div>
+            <!-- 验证码 -->
+            <div class="form-group ">
+                <label for=" " class="col-md-1 col-md-offset-3 control-label hidden-xs">验证码</label>
+                <div class="col-md-3">
+                    <input type="text " class="form-control" placeholder="请输入验证码 ">
+                </div>
+                <div class="col-md-2">
+                    <input type="text " class="form-control" />
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <div class="col-md-9">
+                    <button class="btn btn-info" style='float:right;margin-left:35px;width:160px;'>清空</button>
+                    <button class="btn btn-info" style='float:right;width:160px;'>登陆</button>
+
+                </div>
+            </div> -->
+            <div class="from-group">
+                <div class="col-md-3 col-md-offset-3">
+                    <button class="btn btn-info" type="button" style='background-color: #fff;color:rgb(51, 55, 59);'>登陆</button>
+                </div>
+                 <div class="col-md-3" style='padding-right:8px;'>
+                    <button class="btn btn-info" type="button">清空</button>
+                </div>
+            </div>
+        </form>
+
+    <script src="lib/js/jquery.js "></script>
+    <script src="lib/js/bootstrap.js "></script>
+</body>
+
+</html>

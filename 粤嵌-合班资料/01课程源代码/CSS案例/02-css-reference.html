@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			/**
+			 * background 
+			 * 图片
+			 * 颜色
+			 * 图片尺寸
+			 * 图片定位
+			 * 尺寸缩放之后定位按比例缩放
+			 * 重复
+			 * 向内裁剪
+			 * 参考点
+			 * 背景浮动
+			 * 
+			 * 伪元素 块级化 有尺寸
+			 * 
+			 * 
+			 * 
+			 * Border
+			 * 宽度
+			 * 颜色
+			 * 样式
+			 * 
+			 * 上右下左 顺时针
+			 * 影响盒子尺寸 box-sizing
+			 * 
+			 * Outline
+			 * 不影响尺寸 box-shadow
+			 * 
+			 * boder-radius
+			 * 
+			 * box-shadow
+			 * 水平 垂直 模糊 大小 颜色 内外
+			 * text-shadow
+			 * 水平 垂直 模糊 颜色
+			 * 
+			 * Padding/margin
+			 * 上右下左 顺时针
+			 * 
+			 * Position
+			 * 绝对
+			 * 相对
+			 * 浮动
+			 * 
+			 * 绝对外面套相对
+			 * z-index 搭配定位
+			 * visibility 可见性
+			 * display 显示模式
+			 * 
+			 * clip 搭配绝对定位
+			 * 
+			 * Table
+			 * 
+			 * Transition
+			 * 属性
+			 * 持续时间
+			 * 速度曲线
+			 * 延迟
+			 * 
+			 * */
+			
+			
+		</style>
+		
+		<p id="borderimg1">在这里，图像平铺（重复），以填补该地区。</p>
+		<style type="text/css">
+			#borderimg1 {
+				width: 300px;
+				height: 50px;
+				border: 50px solid red;
+				background: lightblue;
+				/*border-image: url(img/border.png);*/
+				border-image-source: url(img/border.png);
+				border-image-slice: 50%;
+				/*border-image-width: 30;*/
+				/*border-image-repeat:stretch;*/
+			}
+		</style>
+	</body>
+</html>

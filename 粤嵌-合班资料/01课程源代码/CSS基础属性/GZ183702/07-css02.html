@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="boxA">
+			<img src="img/avatar.jpg" />
+			<h3>我是标题</h3>
+			<p>段落段落段落段落段落段落段落</p>
+		</div>
+		
+		<div class="boxB">
+			<img src="img/avatar.jpg" />
+			<h3>我是标题</h3>
+			<p>段落段落段落段落段落段落段落</p>
+		</div>
+		
+		<header class="boxB">
+			dddddddddddddddd
+		</header>
+		<style type="text/css">
+			/*组合选择器*/
+			
+			/* 选中class为boxB的元素 后代里面的 h3 元素*/
+			/*空格 后代选择器*/
+			.boxA h3 {
+				color: red;
+			}
+			
+			.boxB {
+				background: orange;
+			}
+			/*选中class为boxB的 header元素*/
+			header.boxB {
+				background: green;
+			}
+			/*.boxB.active*/ 
+		</style>
+		
+		<hr />
+		
+
+	</body>
+
+</html>

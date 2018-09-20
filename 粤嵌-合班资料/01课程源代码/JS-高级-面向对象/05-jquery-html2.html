@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body class="ancestors">body (曾曾祖父节点)
+    <div>ddddddddddddddd
+        <div style="width:500px;">div (曾祖父节点)
+            <ul>ul (祖父节点)
+                <li>li (直接父节点)
+                    <em>dddddddddddddd</em>
+                    <em>dddddddddddddd</em>
+                    <em>dddddddddddddd</em>
+                    <span>span</span>
+                    <em>dddddddddddddd</em>
+                    <em>dddddddddddddd</em>
+                    <i>iiiiiiiiiii</i>
+                    <em>dddddddddddddd</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+
+        .red {
+            border: 2px solid red;
+        }
+
+        .green {
+            border: 2px solid green;
+        }
+
+        .yellow {
+            border: 2px solid yellow;
+        }
+    </style>
+
+    <script>
+        // $('span').append('<code>xxxxxxxx</code>');
+        // $('<code>xxxxxxxx</code>').insertBefore('span');
+        // $('i').insertBefore('span');
+        // $('i').insertAfter('span');
+
+        // $('span').append(function (i, v) {
+        //     console.log(i + v)
+        //     return '<code>xxxxxxxx</code>';
+        // });
+        
+        // $('<code>xxxxxxxx</code>').appendTo('span');
+        // $('span').before('<code>xxxxxxxx</code>')
+
+        // $('span').offset()
+        // $('span').offset(function (i, v) { 
+        //     console.log(v.top)
+        //     return v.top + 20;
+        //  })
+        $('span').click(function () { 
+            console.log('xx')
+         })
+        $('span').clone(true).appendTo('li');
+
+    </script>
+
+</body>
+
+</html>

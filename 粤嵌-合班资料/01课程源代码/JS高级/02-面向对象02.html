@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			img {
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			var yellowCar = {
+				x: 0,
+				y: 0,
+				imgSrc:'img/car1.png'
+			}
+			var greenCare = {
+				x: 0,
+				y: 100,
+				imgSrc:'img/car2.png'
+			}
+			
+			/*var draw = function () {
+				var imgNode = document.createElement('img');
+				imgNode.src = 'img/car1.png';
+				document.body.appendChild(imgNode);
+				
+				console.log(imgNode)
+			}*/
+			
+			/*var draw = function (x, y, imgSrc) {
+				var imgNode = document.createElement('img');
+				imgNode.src = imgSrc;
+				imgNode.style.top = y + 'px';
+				imgNode.style.left = x + 'px';
+				document.body.appendChild(imgNode);
+				
+				console.log(imgNode)
+			}
+			draw(0, 0,'img/car1.png');
+			draw(0, 100,'img/car2.png');*/
+			
+			var draw = function (car) {
+				var imgNode = document.createElement('img');
+				imgNode.src = car.imgSrc;
+				imgNode.style.top = car.y + 'px';
+				imgNode.style.left = car.x + 'px';
+				document.body.appendChild(imgNode);
+				
+				console.log(imgNode)
+				return imgNode
+			}
+			
+			var car1 = draw(yellowCar);
+			var car2 = draw(greenCare);
+			
+			
+			var move = function (car) {
+				car.style.left = parseInt(car.style.left) + 10 + 'px';
+			}
+			move(car2);
+			move(car2);
+			move(car2);
+			move(car2);
+		</script>
+	</body>
+</html>

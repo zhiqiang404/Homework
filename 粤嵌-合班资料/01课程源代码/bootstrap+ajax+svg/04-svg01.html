@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    xxx
+    <svg width="600" height="500">
+        <circle cx="50" cy="50" r="50" stroke="blue" stroke-width="2" fill="red"></circle>
+        <circle cx="150" cy="60" r="50" style="fill:brown; stroke:coral;"></circle>
+        <rect x="250" y="50" width="100" height="100" fill="orange" fill-opacity="0.1"></rect>
+
+        <ellipse cx="150" cy="200" rx="50" ry="30"></ellipse>
+
+        <line x1="50" y1="50" x2="150" y2="150" stroke="black" stroke-width="5" />
+
+        <polygon points="50,50 100,150 50,150" style="fill:burlywood; stroke:red;" />
+
+        <!-- <polygon points="100,10 40,180 190,60 10,60 160,180" fill-rule="evenodd" style="fill:lime;stroke:purple;stroke-width:5;" /> -->
+        <polyline points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;" />
+    </svg>
+
+    <svg width="600" height="500">
+        <!-- <path d="M150 0 L100 150 L200 150" fill="orange" stroke="" stroke-width="" />
+        <path d="M150 150 l-50 100 h100 z" fill="none" stroke="orange" stroke-width="" /> -->
+
+        <path d="M100 350 l150 -300 l150 300" stroke="black" stroke-width="5" fill="none" />
+        <path d="M100 350 q150 -300 300 0" stroke="black" stroke-width="5" fill="none" />
+    </svg>
+
+    <hr>
+    <svg width="600" height="500">
+        <rect x="0" y="50" width="100" height="100" fill="orange">
+            <animate attributeType="XML" attributeName="x" from="0" to="200" dur="10s" repeatCount="indefinite" />
+        </rect>
+    </svg>
+
+    <style>
+        svg path {
+            stroke: red;
+        }
+    </style>
+    <hr><svg width=100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <polygon points="60,30 90,90 30,90">
+            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 60 30" to="360 60 30"
+                dur="10s" repeatCount="indefinite" />
+        </polygon>
+    </svg>
+
+    <hr>
+
+    <svg viewBox="0 0 100 100" width="50" height="50">
+        <!-- <rect x="0" y="0" width="100" height="100" fill="orange"></rect> -->
+        <!-- <polygon points="50,0 0,100 100,100" style="" /> -->
+
+
+        <path stroke="#000" fill="#fff" stroke-width="1.5" d="m50.74325,11.52806c3.99246,0.00505 7.80653,0.69632 11.41863,1.85118l-2.85871,4.94423l20.29224,0l-5.07437,-8.78804l-5.07048,-8.78543l-2.66914,4.62936c-5.0024,-1.82889 -10.39518,-2.85244 -16.03454,-2.85244c-25.95752,0 -46.99689,21.0407 -46.99689,46.99811c0,10.77317 3.6641,20.67137 9.76199,28.60184l7.14613,-5.48678c-4.93179,-6.4089 -7.89706,-14.40633 -7.91317,-23.11247c0.03592,-20.98623 17.01466,-37.96739 37.99828,-37.99956l0,0l0.00002,0zm37.23984,9.40504l-7.14611,5.4894c4.93056,6.40647 7.89585,14.39886 7.90941,23.10757c-0.03592,20.98606 -17.01466,37.96478 -37.9995,37.99936c-3.71864,-0.00481 -7.27623,-0.60946 -10.66775,-1.62067l2.69014,-4.6518l-20.29217,0l5.07061,8.78319l5.07426,8.7953l2.82898,-4.9094c4.79793,1.67027 9.9329,2.60212 15.29591,2.60454c25.96126,-0.00484 46.99703,-21.04555 47.00311,-47.00298c-0.0061,-10.77316 -3.67281,-20.66894 -9.76692,-28.59452l0,0l0.00003,0z"
+            id="svg_1" />
+    </svg>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="box" style="background: lightblue;">
+				<span>box1</span>
+			</div>
+			<div class="box" style="background: lightcoral;">
+				<span>box2 box box box box2 box box box box2 box box box box2 box box boxbox2 box box box box2 box box boxbox2 box box box box2 box box boxbox2 box box box box2 box box box</span>
+			</div>
+			<div class="box" style="background: lightgreen;">
+				<span>box3</span>
+			</div>
+			<div class="box" style="background: lightsalmon;">
+				<span>box4 box4 box4 box4 box4</span>
+			</div>
+			
+		</div>
+		
+		<style type="text/css">
+			.bigbox {
+				display: flex;
+				width: 500px;
+				height: 500px;
+				background: gray;
+				margin: 0 auto;
+				
+				/*flex-direction: row-reverse;*/
+				/*flex-wrap: wrap-reverse;*/
+				/*flex-flow: flex-direction flex-wrap;*/
+				
+				flex-flow: row wrap;
+				
+				align-content: space-between;
+				
+				align-items: center;
+				
+				justify-content: flex-end;
+			}
+			.bigbox .box {
+				/*flex: 1;*/
+				flex-basis: 100px;
+			}
+			
+			
+			
+			
+			
+			.bigbox .box:nth-of-type(1) {
+				/*flex-grow: 1;*/
+				flex-shrink: 1;
+			}
+			.bigbox .box:nth-of-type(2) {
+				/*flex-grow: 1;*/
+				flex-shrink: 1;
+			}
+			.bigbox .box:nth-of-type(3) {
+				/*flex-grow: 3;*/
+				flex-shrink: 3;
+				align-self: stretch;
+			}
+			/*.bigbox .box:nth-of-type(4) {
+				flex-grow: 1;
+			}*/
+		</style>
+	</body>
+</html>

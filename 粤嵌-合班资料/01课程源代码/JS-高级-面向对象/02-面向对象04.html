@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			img {
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			var Car = function (x, y, imgSrc, speed) {
+				this.x = x;
+				this.y = y;
+				this.speed = speed;
+				this.imgSrc = imgSrc;
+				this.draw = function () {
+					this.imgNode = document.createElement('img');
+					this.imgNode.src = this.imgSrc;
+					this.imgNode.style.top = this.y + 'px';
+					this.imgNode.style.left = this.x + 'px';
+					document.body.appendChild(this.imgNode);
+				}
+			}
+			
+			Car.prototype.move = function () {
+				this.imgNode.style.left = parseInt(this.imgNode.style.left) + this.speed + 'px';
+			}
+			
+			// 实例化
+			var car1 = new Car(0, 0 ,'img/car1.png', 10);
+			car1.draw();
+			var car2 = new Car(0, 100 ,'img/car2.png', 5);
+			car2.draw();
+			
+//			var yellowCar = {
+//				x: 0,
+//				y: 0,
+//				imgSrc:'img/car1.png',
+//				draw: function () {
+//					this.imgNode = document.createElement('img');
+//					this.imgNode.src = this.imgSrc;
+//					this.imgNode.style.top = this.y + 'px';
+//					this.imgNode.style.left = this.x + 'px';
+//					document.body.appendChild(this.imgNode);
+//				}
+//			}
+//			
+//			var greenCare = {
+//				x: 0,
+//				y: 100,
+//				imgSrc:'img/car2.png',
+//				draw: function () {
+//					this.imgNode = document.createElement('img');
+//					this.imgNode.src = this.imgSrc;
+//					this.imgNode.style.top = this.y + 'px';
+//					this.imgNode.style.left = this.x + 'px';
+//					document.body.appendChild(this.imgNode);
+//				}
+//			}
+			
+			setInterval(function () {
+				car1.move();
+				car2.move();
+			},300)
+			
+		</script>
+	</body>
+</html>

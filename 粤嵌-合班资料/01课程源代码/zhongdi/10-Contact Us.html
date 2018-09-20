@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<section class="contactus">
+			<div class="wrap">
+				<h3 class="title">Contact Us</h3>
+				<form action="" method="get">
+					<label>
+						<span>Name :</span><br />
+						<input type="text" id="" value="" name="Name"/></label>
+					<label>
+						<span>EmailXXXXXXXX :</span><br />
+						<input type="email" id="" value="" name="Email" /></label>
+					<label>
+						<span>Subject  :</span><br />
+						<input type="text" id="" value="" name="Subject" /></label>
+					<label>
+						<span>Message  :</span><br />
+						<textarea name="Message" rows="" cols=""></textarea></label>
+					<br />
+					<input type="submit" value="SEND"/>
+				</form>
+			</div>
+		</section>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			.wrap {
+				width: 1140px;
+				margin: 0 auto;
+			}
+			
+			.contactus h3 {
+				text-align: center;
+			}
+			.contactus form label {
+				width: 360px;
+				margin: 10px;
+				/*background: red;*/
+				float: left;
+			}
+			.contactus form label span {
+				font-weight: bold;
+				/*margin-bottom: 50px;*/
+			}
+			.contactus form label:nth-of-type(4) {
+				width: 1120px;
+			}
+			.contactus form label input {
+				width: 338px;
+				
+			}
+			.contactus form label textarea {
+				width: 1098px;
+				height: 500px;
+				resize: none;
+			}
+			.contactus form label input,
+			.contactus form label textarea {
+				padding: 10px;
+				border: 1px solid lightgray;
+				transition: all .3s;
+				outline: none;
+				color: brown;
+				margin-top: 5px;
+				font-size: 18px;
+				line-height: 24px;
+			}
+			.contactus form label input:hover,
+			.contactus form label textarea:hover {
+				border: 1px solid brown;
+			}
+			
+			.contactus form input[type=submit] {
+				background: #16A667;
+				border: none;
+				color: white;
+				padding: 10px 30px;
+				margin-left: 10px;
+				transition: all .3s;
+			}
+			.contactus form input[type=submit]:hover {
+				background: orange;
+			}
+		</style>
+	</body>
+</html>

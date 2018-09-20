@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			for (var i = 0; i < 3; i++) {
+//				debugger;
+////				console.log('i' + i);
+//				for (var i = 0; i < 5; i++) {
+//					debugger;
+//					console.log('i' + i + " " + "i" + i);
+//				}
+//			}
+			// 死循环
+			
+			
+			for (var i = 0; i < 3; i++) {
+				for (var j = 0; j < 5; j++) {
+//					debugger;
+					if (j === 2) {
+//						break;
+						continue;
+					}
+					console.log('i' + i + " " + "j" + j);
+				}
+			}
+		</script>
+	</body>
+</html>

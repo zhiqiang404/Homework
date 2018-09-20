@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="bb aa">xxxx</p>
+    <a href="http://www.baidu.com">百度</a>
+    <section>
+        <header>header</header>
+    </section>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .aa {
+            color: red;
+        }
+
+        .bb {
+            color: blue;
+        }
+
+        a::after {
+            content: attr(href);
+        }
+
+        section {
+            /* width: 100%; */
+        }
+
+        header {
+            width: calc(100% - 100px);
+            /* width: 100%; */
+            /* box-sizing: border-box; */
+            /* margin: 50px; */
+            background: red;
+
+        }
+    </style>
+    <hr>
+    <div class="box"></div>
+    <style>
+        .box {
+            width: 600px;
+            height: 300px;
+            /* background: red; */
+            /* background: linear-gradient(to left top, red, blue); */
+            /* background: linear-gradient(30deg, red, blue); */
+            /* background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); */
+            /* background: linear-gradient(orange 20%, lightblue 20%, red 80%, blue 80%) */
+            /* background: radial-gradient(circle closest-corner at top, red, blue, orange) */
+
+            background: repeating-linear-gradient(orange 10%, red 10%, orange 20%)
+        }
+    </style>
+
+    <hr>
+    <svg>
+        <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+    </svg>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+插件的触发:
+1. data-*  html属性的方式去调用插件
+	data-toggle="dropdown"
+	data-toggle="collapse"
+	data-spy="scroll"
+
+2.js调用实现插件

@@ -1,0 +1,25 @@
+01-变量.html?__hbt=1534729222832:26 undefined
+var nine = 9
+undefined
+nine
+9
+nine.toString()
+"9"
+String(nine)
+"9"
+var isEated = true;
+undefined
+isEated
+true
+isEated.toString()
+"true"
+Number(isEated)
+1
+isEated
+true
+isEated + 1
+2
+String(false)
+"false"
+Number(false)
+0

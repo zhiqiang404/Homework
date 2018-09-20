@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg viewBox="0 0 100 100" width="500" height="500">
+        <line x1="0" y1="0" x2="100" y2="0" stroke="black" stroke-width="5" />
+
+
+        <line x1="0" y1="10" x2="100" y2="10" stroke="black" stroke-width="5" stroke-dasharray="10" />
+        <!-- <line x1="0" y1="20" x2="100" y2="20" stroke="black" stroke-width="5" stroke-dasharray="10 5 5 1" /> -->
+        <line x1="0" y1="20" x2="100" y2="20" stroke="black" stroke-width="5" stroke-dasharray="10 5" />
+        <line x1="0" y1="30" x2="100" y2="30" stroke="black" stroke-width="5" style="stroke-dasharray:100; stroke-dashoffset:12;">
+            <animate attributeType="XML" attributeName="stroke-dashoffset" from="100" to="12" dur="3s" />
+        </line>
+        <line x1="0" y1="40" x2="100" y2="40" stroke="black" stroke-width="5" style="stroke-dasharray:100; stroke-dashoffset:16;">
+            <animate attributeType="XML" attributeName="stroke-dashoffset" from="100" to="16" dur="3s" />
+        </line>
+        <line x1="0" y1="50" x2="100" y2="50" stroke="black" stroke-width="5" style="stroke-dasharray:100; stroke-dashoffset:8;">
+            <animate attributeType="XML" attributeName="stroke-dashoffset" from="100" to="8" dur="3s" />
+        </line>
+    </svg>
+
+
+    <svg id="xx" viewBox="0 0 37.8 37.8" width="300" height="300">
+        <circle cx="18.91" cy="18.91" r="15.91" style="fill: none; stroke: rgba(0,0,0,0.1); stroke-width: 3;"></circle>
+        <circle cx="18.91" cy="18.91" r="15.91" style="fill: none; stroke: orange; stroke-width: 3; stroke-dasharray:100; stroke-dashoffset:20;">
+            <animate attributeType="XML" attributeName="stroke-dashoffset" from="100" to="20" dur="3s" />
+        </circle>
+        
+
+    </svg>
+
+    <style>
+        line {
+            stroke: orange;
+        }
+        #xx {
+            
+            transform: rotate(-90deg);
+        }
+    </style>
+</body>
+
+</html>

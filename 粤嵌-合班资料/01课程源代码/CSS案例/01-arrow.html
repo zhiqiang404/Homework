@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="box"></div>
+		</div>
+		<style type="text/css">
+			body {
+				background: rgba(255,0,0,0.5);
+			}
+			.bigbox {
+				clip: rect(-50px, 200px, 50px, -50px);
+				position: absolute;
+				top: 30px;
+				left: 50px;
+				
+			}
+			.box {
+				width: 100px;
+				height: 100px;
+				background: rgba(255,0,0,0.5);
+				border: 5px solid blue;
+				border-right: none;
+				border-bottom: none;
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				
+				
+				
+			}
+		</style>
+	</body>
+</html>

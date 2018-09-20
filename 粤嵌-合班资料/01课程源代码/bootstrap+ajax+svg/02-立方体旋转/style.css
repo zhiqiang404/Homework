@@ -1,0 +1,81 @@
+.container {
+  -webkit-perspective: 500;
+          perspective: 500;
+  -webkit-perspective-origin: 0% 50%;
+          perspective-origin: 0% 50%;
+}
+.container .cube {
+  width: 100px;
+  height: 100px;
+  margin: 100px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rotate 8s ease-in-out infinite;
+          animation: rotate 8s ease-in-out infinite;
+}
+.container .cube .side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 0;
+}
+.container .cube .side1 {
+  background: #41c3ac;
+  -webkit-transform: translateZ(-100px);
+          transform: translateZ(-100px);
+}
+.container .cube .side2 {
+  background: #ff884d;
+  -webkit-transform: rotateY(90deg) translateZ(-50px);
+          transform: rotateY(90deg) translateZ(-50px);
+}
+.container .cube .side3 {
+  background: #32526e;
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+}
+.container .cube .side4 {
+  background: #65a2c5;
+  -webkit-transform: rotateX(90deg) translateZ(-100px);
+          transform: rotateX(90deg) translateZ(-100px);
+}
+.container .cube .side5 {
+  background: #ffcc5c;
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+          transform: rotateX(90deg) translateZ(100px);
+}
+.container .cube .side6 {
+  background: #ff6b57;
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(360deg) rotateY(0deg);
+            transform: rotateX(360deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(360deg) rotateY(0deg);
+            transform: rotateX(360deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+/*# sourceMappingURL=./style.css.map */

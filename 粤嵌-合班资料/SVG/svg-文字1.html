@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg>
+        <!-- 简单文本 -->
+        <text x="0" y="15" style="fill:red;">I love SVG</text>
+    </svg>
+    <svg>
+        <!-- 文本旋转 -->
+        <text x="0" y="15" style='fill:red;' transform="rotate(30 20,40)">I loveSVG</text>
+        <!-- 源码 -->
+        <text x="0" y="20" fill="red" transform="rotate(30 20,40)">I love SVG</text>
+    </svg>
+    <svg>
+        <!-- 源码 -->
+        <defs>
+            <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
+        </defs>
+        <text x="10" y="100" style="fill:red;">
+            <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
+        </text>
+
+        <!-- 文字环状环绕 -->
+        <defs>
+            <path id='path1' d="M75,20 a1,1 0 0,0 100,0" />
+        </defs>
+        <text x="5" y="20" style="fill:red;">
+            <textPath xlink:href="#path1">
+                I love SVG I love SVG
+            </textPath>
+        </text>
+    </svg>
+    <!-- <tspan> -->
+    <svg>
+        <text x="10" y="20" style="fill:red;">Several lines;</text>
+        <tspan x='10' y='45'>First line</tspan>
+        <tspan x='10' y='70'>Second line</tspan>
+    </svg>
+    <!-- stroke-dasharray -->
+    <svg>
+        <g stroke='black' stroke-width='4'>
+            <path stroke-dasharray="5,5" d="M5 20 l215 0"></path>
+            <path stroke-dasharray='10,10' d='M5 40 l215 0'></path>
+            <path stroke-dasharray='20,10,5,5,5,10' d='M5 60 l215 0'></path>
+        </g>
+    </svg>
+
+</body>
+
+</html>

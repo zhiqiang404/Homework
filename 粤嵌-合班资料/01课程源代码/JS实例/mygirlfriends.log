@@ -1,0 +1,36 @@
+var cars=["Saab","Volvo","BMW"];
+undefined
+cars
+(3) ["Saab", "Volvo", "BMW"]0: "Saab"1: "Volvo"2: "BMW"length: 3__proto__: Array(0)
+cars[0]
+"Saab"
+var x = [1, "2","第三个"]
+undefined
+x
+(3) [1, "2", "第三个"]0: 11: "2"2: "第三个"length: 3__proto__: Array(0)
+var firstgirlfriend = "xiaohong";
+undefined
+firstgirlfriend
+"xiaohong"
+var secondgirlfriend = "xiaoli";
+undefined
+secondgirlfriend
+"xiaoli"
+var thirdgirlfriend = "xiaosan"
+undefined
+firstgirlfriend
+"xiaohong"
+secondgirlfriend
+"xiaoli"
+thirdgirlfriend
+"xiaosan"
+var mygirlfriends = [firstgirlfriend, secondgirlfriend, thirdgirlfriend]
+undefined
+mygirlfriends
+(3) ["xiaohong", "xiaoli", "xiaosan"]0: "xiaohong"1: "xiaoli"2: "xiaosan"length: 3__proto__: Array(0)
+mygirlfriends[0]
+"xiaohong"
+mygirlfriends.length
+3
+mygirlfriends[mygirlfriends.length - 1]
+"xiaosan"

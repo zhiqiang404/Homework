@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="#">Read More</a>
+		
+		<style type="text/css">
+			a {
+				text-decoration: none;
+				color: white;
+				background: orange;
+				width: 200px;
+				line-height: 50px;
+				display: block;
+				text-align: center;
+				
+				position: relative;
+				z-index: 1;
+			}
+			a:after {
+				content: '';
+				width: 200px;
+				height: 50px;
+				background: green;
+				display: block;
+				
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				
+				transition: all .5s;
+			}
+			
+			a:hover:after {
+				transform: rotateX(90deg);
+				-webkit-transform: rotateX(90deg);
+			}
+		</style>
+	</body>
+</html>

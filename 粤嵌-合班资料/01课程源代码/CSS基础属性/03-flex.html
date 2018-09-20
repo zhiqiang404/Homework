@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="box" style="background: lightblue;">box1</div>
+			<div class="box" style="background: lightcoral;">box2</div>
+			<div class="box" style="background: lightgreen;">box3</div>
+		</div>
+		
+		<style type="text/css">
+			.bigbox {
+				display: flex;
+				width: 200px;
+				background: red;
+			}
+			.bigbox div {
+				/*width: 33.33%;
+				float: left;
+				padding: 20px;*/
+				
+				/*flex: 1;*/
+				
+				flex-basis: 100px;
+			}
+			.bigbox div:nth-of-type(1) {
+				/*flex-grow: 1;*/
+				flex-shrink: 1;
+			}
+			.bigbox div:nth-of-type(2) {
+				/*flex-grow: 3;*/
+				flex-shrink: 1;
+			}
+			.bigbox div:nth-of-type(3) {
+				/*flex-grow: 1;*/
+				flex-shrink: 2;
+			}
+		</style>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="header">header</div>
+			<div class="middle">
+				<div class="left">left</div>
+				<div class="right">right</div>
+			</div>
+			<div class="footer">版权 © runoob.com</div>
+		</div>
+		
+		<style type="text/css">
+			.bigbox {
+				width: 500px;
+				/*background: lightcoral;*/
+				margin: 0 auto; /*块级元素居中*/
+			}
+			.header {
+				background: orange;
+			}
+			.middle {
+				overflow: hidden;
+				background: lightblue;
+			}
+			.middle .left {
+				background: lawngreen;
+				float: left;
+				
+				width: 100px;
+				height: 100px;
+			}
+			.middle .right {
+				background: gray;
+				float: right;
+				width: 400px;
+				height: 100px;
+			}
+			.footer {
+				background: orange;
+				text-align: center; /*行内元素居中*/
+			}
+		</style>
+	</body>
+</html>

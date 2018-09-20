@@ -1,0 +1,24 @@
+var person={firstname:"John", lastname:"Doe", id:5566};
+undefined
+person
+{firstname: "John", lastname: "Doe", id: 5566}firstname: "John"id: 5566lastname: "Doe"__proto__: Object
+mygirlfriends
+(3) ["xiaohong", "xiaoli", "xiaosan"]0: "xiaohong"1: "xiaoli"2: "xiaosan"length: 3__proto__: Array(0)
+person.firstname
+"John"
+person.id
+5566
+person.age
+undefined
+person.age = 56;
+56
+person
+{firstname: "John", lastname: "Doe", id: 5566, age: 56}
+mygirlfriends.length
+3
+mygirlfriends[3]
+undefined
+mygirlfriends[3] = "xiaohua"
+"xiaohua"
+mygirlfriends
+(4) ["xiaohong", "xiaoli", "xiaosan", "xiaohua"]

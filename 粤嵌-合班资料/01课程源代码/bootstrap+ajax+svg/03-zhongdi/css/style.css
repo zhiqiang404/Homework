@@ -1,0 +1,75 @@
+header {
+  padding: 20px;
+  background: url(../images/banner.jpg) no-repeat;
+}
+header .nav {
+  background: rgba(0, 0, 0, 0.41);
+  padding: 15px 0;
+}
+header .nav .glyphicon-menu-hamburger {
+  display: none;
+}
+header .nav .breadcrumb {
+  margin-bottom: 0;
+  background: none;
+}
+header .nav .form-group {
+  margin: 0;
+}
+header .nav .form-group input {
+  background: transparent;
+}
+header .nav .form-group span {
+  color: white;
+}
+header .grids {
+  position: relative;
+  top: 100px;
+}
+header .grids .col-xs-3 {
+  text-align: center;
+}
+header .grids .col-xs-3 .thumbnail {
+  background: #16a667;
+  border: none;
+  border-radius: 0;
+}
+header .grids .col-xs-3 .thumbnail img {
+  background: none;
+  padding: 10px;
+  border-width: 5px;
+}
+@media screen and (max-width: 767px) {
+  header .nav {
+    position: relative;
+  }
+  header .nav .glyphicon-menu-hamburger {
+    display: block;
+  }
+  header .nav ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    display: none;
+  }
+  header .nav ul li {
+    display: block;
+    background: orange;
+  }
+  header .thumbnail .caption h3 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  header .thumbnail .caption h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  header .thumbnail .caption h3 {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=./style.css.map */

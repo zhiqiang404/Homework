@@ -1,0 +1,11 @@
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  background: orange;
+}
+.box div {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=./style.css.map */

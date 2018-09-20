@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var x = function(a, b, c, d) {
+				//				console.log('a: ' + a);
+				//				console.log('b: ' + b);
+				//				console.log('c: ' + c);
+				//				console.log('d: ' + d);
+				console.log(arguments);
+			}
+			var nick = {
+				name: 'nicholas',
+				age: '26'
+			}
+
+			var y = function(a) {
+				console.log(a.name)
+				console.log(a.job)
+				console.log(a.age)
+
+			}
+			y(nick);
+
+			var z = function() {
+				console.log(arguments[0]);
+				console.log(arguments[1]);
+			}
+			
+			// 作业1 写一个add函数 判断带的参数 如果只有一个参数 则返回参数+100
+			//	  如果一个以上参数,那么返回参数的总和
+		</script>
+
+		<!--<script type="text/javascript">
+			// 计数器
+			var counter = 0;
+			var add = function () {
+				return counter += 1;
+			}
+			// counter爆漏出去了变成全局变量 其他的函数的等等都可以访问counter
+		</script>-->
+
+		<!--<script type="text/javascript">
+			var add = function () {
+				var counter = 0;
+				
+				var plus = function () {
+					return counter += 1;
+				}
+//				console.log(plus());
+				
+				return plus;
+				
+			}
+		</script>-->
+		
+		<script type="text/javascript">
+			var add = function() {
+				var counter = 0;
+				return function() {
+					return counter += 1;
+				}
+			};
+			var plus = add();
+		</script>
+
+		<!--<script type="text/javascript">
+			var add = (function() {
+				var counter = 0;
+				var plus = function() {
+					return counter += 1;
+				}
+				return plus;
+			})();
+		</script>-->
+		
+		
+		<!--<script type="text/javascript">
+			var add = (function() {
+				var counter = 0;
+				return function() {
+					return counter += 1;
+				}
+			})();
+			
+			// 作业2 一个页面有两个按钮 每个按钮都是一个计数器 每点击一次就加一 把数字保存到btn的value
+		</script>-->
+		
+		
+		<input type="button" name="" id="" value="btnA Count0" />
+		<input type="button" name="" id="" value="btnA Count0" />
+	</body>
+
+</html>

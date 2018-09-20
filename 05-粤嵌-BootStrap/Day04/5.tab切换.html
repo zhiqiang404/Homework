@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动监听</title>
+	<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css"/>
+	<style>
+	.tab-pane{
+		height:100px;
+	}
+	</style>
+</head>
+<body>
+<!-- div.container>ul.nav.nva-tab>(li>a[href='#tab$']{选项$})*3 -->
+<!-- +div.tab-content>div.#tab$.tab-pan.fade.in active{内容$} -->
+<div class="container">
+	<!--导航-->
+	<ul class="nav nav-tabs">
+		<!-- data-toggle="tab" 开启tab插件 href="#mubiao" -->
+		<li class="active"><a href="#one">选项1</a></li>	
+		<li><a href="#two">选项2</a></li>	
+		<li><a href="#three">选项3</a></li>	
+	</ul>
+	<!--切换的内容容器 tab-content -->
+	<div class="tab-content">
+		<!--内容 tab-pane -->
+		<div id="one" class="tab-pan fade  in active">内容1</div>
+		<div id="two" class="tab-pane fade">内容2</div>
+		<div id="three" class="tab-pane">内容3</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="lib/js/jquery.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.js"></script>	
+	<script>
+	$(function(){
+		//js开tab插件功能
+		$('.nav a').click(function(){
+			$(this).tab('show');
+		});
+		//用js直接显示第二个tab
+		// $('.nav a').eq(1).tab('show');
+		//自定义事件
+		$('.nav a').on('show.bs.tab',function(e){
+			//target  当前触发事件的对象
+			//relatedTarget 当前触发事件之前作用对象
+			// alert("show事件");
+			$(e.relatedTarget).css({
+				borderBottomColor:'#F00'
+			}).parent().siblings().find('a').css('borderBottomColor','#ddd');
+			
+			$(e.target).css("borderBottomColor",'transparent');
+		});
+		$('.nav a').on('shown.bs.tab',function(e){
+			// alert('shown事件');
+		});
+
+	});
+	</script>
+</body>
+</html>
