@@ -10,7 +10,7 @@
 
 ### Javascript
 
-
+放大镜
 
 ### JQuery
 
@@ -18,15 +18,17 @@
 
 ### Ajax
 
-淘宝搜索练习
+[淘宝搜索练习](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/04-%E7%B2%A4%E5%B5%8C-Ajax/%E6%B7%98%E5%AE%9D%E6%90%9C%E7%B4%A2%E7%BB%83%E4%B9%A0.html)
 
-图片预览
+[图片预览](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/04-%E7%B2%A4%E5%B5%8C-Ajax/%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88.html)
 
 
 
 ### Bootstrap
 
-阶段考试项目
+[阶段考试项目-前台界面](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/05-%E7%B2%A4%E5%B5%8C-BootStrap/%E9%98%B6%E6%AE%B5%E8%80%83%E8%AF%95%E9%A1%B9%E7%9B%AE/%E5%89%8D%E5%8F%B0(%E6%94%B9).html)
+
+[阶段考试项目-后台界面](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/05-%E7%B2%A4%E5%B5%8C-BootStrap/%E9%98%B6%E6%AE%B5%E8%80%83%E8%AF%95%E9%A1%B9%E7%9B%AE/index.html)
 
 慕课-文档案例练习
 
@@ -44,7 +46,9 @@
 
 ### svg
 
-字体图标
+[字体图标](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/07-%E7%B2%A4%E5%B5%8C-svg/%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87.1.html)
+
+
 
 
 
