@@ -1,0 +1,39 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+.searchbox{
+	width:500px;
+	margin:50px auto;
+}
+.searchbox input{
+	float:left;
+	border:0;
+	outline:none;
+	text-indent:10px;
+}
+.searchbox input[type='text']{
+	width:398px;
+	height:30px;
+	border:1px solid #F55;
+}
+.searchbox input[type='button']{
+	width:100px;
+	background-color: #F55;
+	color:#FFF;
+	height:32px;
+	text-align:center;
+}
+.searchbox ul{
+	list-style:none;
+	width:398px;
+	border:1px solid #ddd;
+	display:none;
+}
+.searchbox ul li{
+	padding-left:10px;
+}
+.searchbox ul li.active{
+	background-color: #f55;
+	color:#fff;
+}
