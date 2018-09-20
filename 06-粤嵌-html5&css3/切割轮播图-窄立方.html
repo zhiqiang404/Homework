@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>切割轮播图-仿制</title>
+	<script src="./js/jquery.min.js"></script>
+	<link rel="stylesheet" href="./css/切割轮播图-仿制2.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="view">
+		<div class='container'>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+		</div>
+		<div class='container'>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+		</div>
+		<div class='container'>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+		</div>
+		<div class='container'>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+		</div>
+
+		<a href='javascript:;' class="left">&lt</a>
+		<a href='javascript:;' class="right">&gt</a>
+	</div>
+
+	<script>
+		var left = document.querySelector('.left');
+		var right = document.querySelector('.right');
+		var containers = document.getElementsByClassName('container');
+		var view = document.querySelector('.view');
+		
+		var index = 0;
+		//最好加个节流阀,一段时间内仅有一次点击生效
+
+		function autoDo() {
+			index--;
+			for (var i = 0; i < 4; i++) {
+				containers[i].style.transform = 'rotateX(' + index * 90 + 'deg)';
+				containers[i].style.transition = (i + 1) * 0.2 + 's';
+			}
+		}
+		var time = setInterval(autoDo,1000);
+		
+		view.onmouseover = function () {
+			clearInterval(time);
+		}
+		view.onmouseleave = function () {
+			time = setInterval(autoDo,1000);
+		}
+
+		left.onclick = function () {
+			index--;
+			for (var i = 0; i < 4; i++) {
+				containers[i].style.transform = 'rotateX(' + index * 90 + 'deg)';
+				containers[i].style.transition = (i + 1) * 0.2 + 's';
+			}
+		}
+		right.onclick = function () {
+			index++;
+			for (var i = 0; i < 4; i++) {
+				containers[i].style.transform = 'rotateX(' + index * 90 + 'deg)';
+				containers[i].style.transition = (i + 1) * 0.2 + 's';
+			}
+		}
+	</script>
+</body>
+
+</html>

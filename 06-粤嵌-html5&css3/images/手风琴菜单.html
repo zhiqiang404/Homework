@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手风琴菜单</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .menu{
+            width:200px;
+            margin:100px auto;
+        }
+        .item{
+            width:100%;
+        }
+        .item>h3{
+            height:40px;
+            line-height:40px;
+            background-color:#7dffe7;
+            color:orange;
+            border-bottom:2px solid #ccc;
+            padding-left:10px;
+        }
+        .item>.itemBox{
+            width:100%;
+            height:0px;
+            overflow:hidden;
+            /*替代方案不可行：display: none;*/
+            /*添加过渡效果:过渡效果只能产生从某个值到另外一个具体的值的过渡*/
+            /*1.一定要设置为哪些css样式添加过渡效果*/
+            transition-property:height;
+            transition-duration:1s;
+        }
+        .item>.itemBox>ul{
+            list-style:none;
+            background-color:#eaffb6;
+            padding:10px;
+        }
+        .item:hover>.itemBox{
+            height:110px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="item">
+            <h3>市内新闻</h3>
+            <div class="itemBox">
+                <ul>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <h3>市内新闻</h3>
+            <div class="itemBox">
+                <ul>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <h3>市内新闻</h3>
+            <div class="itemBox">
+                <ul>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <h3>市内新闻</h3>
+            <div class="itemBox">
+                <ul>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                    <li>深圳xxxx</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

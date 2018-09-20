@@ -26,12 +26,12 @@
 			}else{
 				console.log('你的浏览器不支持Ajax');
 			}
-			
+			//验证账号是否存在
 			usernameInput.onkeyup=function(){
 				var username=document.getElementById("username").value;
 				console.log(username);
 				//变量不能写在字符串里面，要不然不会得到解析
-				ajax.open('GET','checkWord.php?name='+username+'');
+				ajax.open('GET','php/checkWord.php?'+username+'');
 				ajax.send();
 				ajax.onreadystatechange=function(){
 					if(ajax.readyState==4&&ajax.status==200){
@@ -57,7 +57,8 @@
 				//利用表单传输文件
 				var data = new FormData(form1);
 				
-				ajax.open('POST',"checkPic.php");
+				//与验证账户不同的php文件
+				ajax.open('POST',"./php/checkPic.php");
 				//post的四种传输方式:urlencoded(默认),form-data,json,xml
 				ajax.send(data);
 				ajax.onreadystatechange=function(){

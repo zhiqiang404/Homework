@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>淘宝练习</title>
+	<link rel="stylesheet" href="css/taobao.css">
+	<script src="js/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+	<div class="searchbox">
+		<input type="text" />
+		<input type="button" value='搜索' />
+		<ul id="dropbox"></ul>
+	</div>
+	<script>
+		$(function () {
+			/* 一般都是用keyup判断键盘事件 */
+			$('[type="text"]').keyup(function (e) {
+				/* 触发事件的方向键盘上、方向键下，回车键，排除他们的干扰 */
+				if (e.keyCode == 38 || e.keyCode == 40 || e.keyCode == 13) return;
+				var keyword = $(this).val();
+
+				$.ajax({
+					url: 'https://suggest.taobao.com/sug?',
+					type: 'get',
+					data: {
+						q: keyword
+					},
+					dataType: 'jsonp',
+					success: function (responsedata) {
+						//将 JSON数据转为数组
+						var result = responsedata.result;
+						var dropboxel = $('#dropbox');
+						dropboxel.empty();
+						for (var i in result) {
+							/* result[i][0]是商品名称 */
+							$('<li/>').text(result[i][0]).appendTo(dropboxel);
+						}
+						dropboxel.show();
+					},
+					error: function (xhr, error, exception) {
+						console.log('xhr==>', xhr);
+						console.log('error', error);
+						console.log('exception', exception);
+					}
+				});
+
+			}).keydown(function (e) {
+				var active = $('#dropbox li.active');
+				/* 下键 */
+				if (e.keyCode == 40) {
+					if (active.length == 0 || active.next().length == 0) {
+						$('#dropbox li').first().addClass('active').siblings().removeClass('active');
+					} else {
+						$(active).next().addClass('active').siblings().removeClass('active');
+					}
+					// 赋值
+					$('[type="text"]').val($('li.active').text());
+				}
+				/* 上键 */
+				else if (e.keyCode == 38) {
+					if (active.length == 0 || active.prev().length == 0) {
+						$('#dropbox li').last().addClass('active').siblings().removeClass('active');
+					} else {
+						$(active).prev().addClass('active').siblings().removeClass('active');
+					}
+					$('[type="text"]').val($('li.active').text());
+				} 
+				else if (e.keyCode == 13) {
+					location.href = "https://s.taobao.com/search?q=" + $('[type="text"]').val();
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
