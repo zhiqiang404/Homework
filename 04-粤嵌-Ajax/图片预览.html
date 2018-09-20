@@ -47,12 +47,12 @@
 			
 			//上传图片 onload、upload还是 change？change就可以了
 			//如果是本地上传，那么使用webAPI就可以实现预览了
-			/* imgSend.onchange=function(){
+			imgSend.onchange=function(){
 				var url=window.URL.createObjectURL(this.files.item(0));
 				imgShow.src=url;
-			} */
+			}
 			
-			imgSend.onchange=function(){
+			/* imgSend.onchange=function(){
 				var form1=document.getElementById("form1");
 				//利用表单传输文件
 				var data = new FormData(form1);
@@ -70,7 +70,7 @@
 						console.log(result);
 					}
 				}
-			}
+			} */
 		</script>
 	</body>
 </html>
