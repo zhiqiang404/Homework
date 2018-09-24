@@ -14,7 +14,7 @@
 
 ### JQuery
 
-
+[放大镜]()
 
 ### Ajax
 
@@ -47,8 +47,6 @@
 ### svg
 
 [字体图标](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/07-%E7%B2%A4%E5%B5%8C-svg/%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87.1.html)
-
-
 
 
 

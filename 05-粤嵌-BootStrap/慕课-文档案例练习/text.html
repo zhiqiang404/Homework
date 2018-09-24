@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+</head>
+
+<body>
+
+   <div class="container">
+       <div class="row">
+           <!-- 一般说来，自己写的CSS样式，通常是后面写的同种属性覆盖前面的属性 -->
+           <!-- 但是col-xx-xx的顺序不用在意，因为在源码，他已经从小到大写好了 -->
+
+           <!-- a>b>c  div.b.a -->
+           <div class="col-md-6 col-sm-3" style='background-color:royalblue'>hahaha</div>
+           <div class="col-sm-3 col-md-6" style='background-color:royalblue'>hehehe</div>
+       </div>
+   </div>
+
+    <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+</body>
+
+</html>

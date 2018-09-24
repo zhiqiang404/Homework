@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导航条</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+</head>
+
+<body>
+    <!-- div.navbar.navbar-default>ul.nav.navbar-nav>(li>a)*n -->
+    <!-- div.navbar.narbar-default>ul>navbar-nav -->
+    <!-- 部件名  > 启动部件 > 部件主体 -->
+
+    <div class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li><a href="#">系列教程</a></li>
+            <li><a href="#">002</a></li>
+            <li><a href="#">003</a></li>
+            <li><a href="#">004</a></li>
+        </ul>
+    </div>
+
+    <!-- 导航条标题 -->
+    <!-- 外层div.nav-header，内层a.nav-brand -->
+    <div class="navbar navbar-default">
+        <div class="navbar-header"><a class='navbar-brand' href="#">导航条标题</a></div>
+        <ul class="nav navbar-nav">
+            <li><a href="#">001</a></li>
+            <li><a href="#">002</a></li>
+            <li><a href="#">003</a></li>
+        </ul>
+    </div>
+
+    <!-- 拥有二级菜单的导航条 -->
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">标题</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <!-- 在nav navbar-nav的中元素组合限制为ul>li>a，要不然会引发排版混乱 -->
+            <li class="dropdown">
+                <a href='#' class="dropdown-toggle" data-toggle='dropdown'>下拉菜单
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">001</a></li>
+                    <li><a href="#">002</a></li>
+                    <li><a href="#" class='disabled'>003</a></li>
+                </ul>
+            </li>
+            <li><a href="">普通选项</a></li>
+            <li><a href="">普通选项</a></li>
+        </ul>
+    </div>
+
+    <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+</body>
+
+</html>

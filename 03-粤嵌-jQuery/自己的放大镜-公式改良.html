@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>自己的放大镜</title>
+	</head>
+	<style type="text/css">
+		html,
+		body {
+			padding: 0px;
+			margin: 0px;
+		}
+		
+		.container {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			/*height:500px;*/
+		}
+		
+		.floatBox {
+			/*position:absolute;
+			left:0px;
+			top:0px;*/
+			float: left;
+			left: 0px;
+			right: 0px;
+			margin-right: 50px;
+			/* display: inline-block; */
+			width: 300px;
+			height: 384.85px;
+		}
+		
+		.smallBox {
+			/*display:none;*/
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			z-index: 99;
+			background: rgba(255, 250, 232, 0.5);
+		}
+		
+		.bigBox {
+			/*position:absolute;*/
+			/*不设置top、left，默认保留在原来的位置*/
+			display: inline-block;
+			position: relative;
+			/*top:0px;
+			left:350px;*/
+			width: 384.85px;
+			height: 384.85px;
+			/*保证图片不爆出去*/
+			overflow: hidden;
+		}
+		
+		.bigBox>img {
+			/*width: 200%;
+			height: 200%;*/
+			position: absolute;
+		}
+	</style>
+	<body>
+		<div class='container'>
+			<div class='floatBox'>
+				<div class="smallBox"></div>
+				<img src="img/small.jpg" style='width:300px' />
+			</div>
+			<div class="bigBox">
+				<img src="img/big.jpg" alt="" />
+			</div>
+		</div>
+
+		<script src='js/jquery-3.3.1.js'></script>
+		<script>
+			$('.smallBox').hide();
+			$('.bigBox').hide();
+
+			$('.floatBox').mouseenter(function() {
+				$('.smallBox').show();
+				$('.bigBox').show();
+			}).mouseleave(function() {
+				//mouseleave是和mouseenter配套使用的
+				$('.smallBox').hide();
+				$('.bigBox').hide();
+			})
+
+			$('.floatBox').mousemove(function(e) {
+				//让鼠标位于移动框中心
+				//为了还原这个情况，设置samllBoxOffsetLeft
+				var smallboxOffsetLeft = parseInt(e.clientX) - parseInt($('.smallBox').width()) / 2;
+				var smallboxOffsetTop = parseInt(e.clientY) - parseInt($('.smallBox').height()) / 2;
+				
+				//移动的边界条件
+				/* X的边界条件：0<left<=img.width-smallBox.offsetWidth
+				 * Y的边界条件：0<top<=img.height-smallBox.offsetHeight
+				 */
+				var maxX = $('.floatBox').width() - $('.smallBox').width();
+				var maxY = $('.floatBox').height() - $('.smallBox').height();
+				
+				smallboxOffsetLeft = Math.min(maxX, Math.max(0, smallboxOffsetLeft));
+				smallboxOffsetTop = Math.min(maxY, Math.max(0, smallboxOffsetTop));
+				$('.smallBox')[0].style.left = smallboxOffsetLeft + 'px';
+				$('.smallBox')[0].style.top = smallboxOffsetTop + 'px';
+
+				//小框、大图的移动比例一致
+				var biliX = smallboxOffsetLeft / maxX;
+				var biliY = smallboxOffsetTop / maxY;
+				
+//				$('.bigBox>img')[0].style.left = -biliX * $('.bigBox>img')[0].offsetWidth + 'px';
+//				$('.bigBox>img')[0].style.top = -biliY * $('.bigBox>img')[0].offsetHeight + 'px';
+				var bigMaxX=$('.bigBox>img').width()-$('.bigBox').width();
+				var bigMaxY=$('.bigBox>img').width()-$('.bigBox').width();
+				
+				$('.bigBox>img')[0].style.left = -biliX * bigMaxX + 'px';
+				$('.bigBox>img')[0].style.top = -biliY * bigMaxY + 'px';
+				
+			});
+		</script>
+	</body>
+
+</html>

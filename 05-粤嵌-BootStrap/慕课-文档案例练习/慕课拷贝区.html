@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慕课拷贝区</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="btn-group-vertical">
+        <button class="btn btn-default" type="button">公司</button>
+        <button class="btn btn-default" type="button">人员</button>
+        <button class="btn btn-default" type="button">机构</button>
+        <button class="btn btn-default" type="button">案例</button>
+        <!-- 下拉菜单 -->
+        <!-- btn-group>(btn.btn.btn-default.dropdown-toggle[data-toggle='drowdown'])>span.caret)+
+        ul.dropdown-menu>(li>a)*4 -->
+        <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" data-toggle='dropdown'>下拉菜单<span class='caret'></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">001</a></li>
+                <li><a href="#">002</a></li>
+                <li><a href="#">003</a></li>
+                <li><a href="#">004</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- btn-group-xx下跟的都是都是buttom才行 -->
+    <div class="btn-group-justified">
+        <a href="#" class="btn btn-default">001</a>
+        <a href="#" class="btn btn-default">002</a>
+        <a href="#" class="btn btn-default">003</a>
+        <a href="#" class="btn btn-default">004</a>
+    </div>
+    
+    <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+</body>
+
+</html>
