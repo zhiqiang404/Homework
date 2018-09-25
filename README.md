@@ -12,12 +12,6 @@
 
 
 
-### JQuery
-
-[放大镜]()
-
-
-
 ### Ajax
 
 [淘宝搜索练习](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/04-%E7%B2%A4%E5%B5%8C-Ajax/%E6%B7%98%E5%AE%9D%E6%90%9C%E7%B4%A2%E7%BB%83%E4%B9%A0.html)
