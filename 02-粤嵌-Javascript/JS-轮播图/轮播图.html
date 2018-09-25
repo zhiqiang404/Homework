@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-轮播图</title>
+    <link rel="stylesheet" href="css/1.css">
+</head>
+
+<body>
+    <div class="container" style='transition: transform 1s'>
+
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+
+        <div class="left">&lt;</div>
+        <div class="right">&gt;</div>
+        <div class="nav">
+            <div class="items1"></div>
+            <div class="items1"></div>
+            <div class="items1"></div>
+            <div class="items1"></div>
+        </div>
+    </div>
+    <script>
+        var left = document.querySelector('.left');
+        var right = document.querySelector('.right');
+        var items = document.getElementsByClassName('items');
+        var items1 = document.getElementsByClassName('items1');
+        var container = document.getElementsByClassName('container');
+
+        items1[0].style.backgroundColor = 'royalblue';
+
+        var index = 0;
+        var flag = 0;
+        //-1 0 1 2 3 4
+        var a;
+        a = setInterval(moveRight, 1500);
+        container[0].onmouseover = function () {
+            clearInterval(a);
+        }
+        container[0].onmouseleave = function () {
+            a = setInterval(moveRight, 1500);
+        }
+
+        function moveRight() {
+            index = index + 1;
+            // console.log(index);
+
+            if (index >= 4) {
+                index = 0;
+                items1[0].style.backgroundColor = 'royalblue';
+                items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                //原来的基础上减500px
+                items[0].style.left = 0 + 'px';
+                items[1].style.left = 500 + 'px';
+                items[2].style.left = 1000 + 'px';
+                items[3].style.left = 1500 + 'px';
+                //console.log(1);
+            } else {
+                //console.log(2);
+                if (index == 1) {
+                    items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    items1[1].style.backgroundColor = 'royalblue';
+                    items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                }
+                if (index == 2) {
+                    items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    items1[2].style.backgroundColor = 'royalblue';
+                    items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                }
+                if (index == 3) {
+                    items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    items1[3].style.backgroundColor = 'royalblue';
+                }
+
+                for (var i = 0; i < items.length; i++) {
+
+                    var temp = parseInt(getComputedStyle(items[i]).left);
+                    //console.log(getComputedStyle(items[i]).left);
+                    items[i].style.left = temp + (-500) + 'px';
+                }
+            }
+        }
+
+        for (var i = 0; i < items1.length; i++) {
+            (function () {
+                var temp = i;
+                items1[temp].onmouseover = function (e) {
+                    //console.log('1')
+                    //要e.target的这个形式
+                    //e.target.style.backgroundColor = 'royalblue';
+                    if (temp == 0) {
+                        index = 0;
+                    }
+                    else if (temp == 1) {
+                        index = 1;
+                    }
+                    else if (temp == 2) {
+                        index = 2;
+                    }
+                    else if (temp == 3) {
+                        index = 3;
+                    }
+
+                    if (index == 0) {
+                        items1[0].style.backgroundColor = 'royalblue';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 1) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'royalblue';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 2) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'royalblue';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 3) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'royalblue';
+                    }
+
+                    items[0].style.left = index * (-500) + 0 + 'px';
+                    items[1].style.left = index * (-500) + 500 + 'px';
+                    items[2].style.left = index * (-500) + 1000 + 'px';
+                    items[3].style.left = index * (-500) + 1500 + 'px';
+                }
+                items1[temp].onmouseleave = function (e) {
+                    //console.log('2')
+                    //要e.target的这个形式
+                    //e.target.style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    if (index == 0) {
+                        items1[0].style.backgroundColor = 'royalblue';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 1) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'royalblue';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 2) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'royalblue';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 3) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'royalblue';
+                    }
+                }
+            })();
+        }
+
+        //应该是相对的加减法，而不是乘法：初始值+/-500px
+        right.onclick = function () {
+            if (flag == 0) {
+                index = index + 1;
+                // console.log(index);
+
+                if (index >= 4) {
+                    index = 0;
+                    items1[0].style.backgroundColor = 'royalblue';
+                    items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    //原来的基础上减500px
+                    items[0].style.left = 0 + 'px';
+                    items[1].style.left = 500 + 'px';
+                    items[2].style.left = 1000 + 'px';
+                    items[3].style.left = 1500 + 'px';
+                    //console.log(1);
+                } else {
+                    //console.log(2);
+                    if (index == 1) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'royalblue';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 2) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'royalblue';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 3) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'royalblue';
+                    }
+
+                    for (var i = 0; i < items.length; i++) {
+                        var temp = parseInt(getComputedStyle(items[i]).left);
+                        //console.log(getComputedStyle(items[i]).left);
+                        items[i].style.left = temp + (-500) + 'px';
+                    }
+                }
+                flag = 1;
+            }
+        }
+
+        left.onclick = function () {
+            if (flag == 0) {
+                index = index - 1;
+
+                //-1 (0 1 2 3) 4
+                if (index < 0) {
+                    index = 3;
+                    items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    items1[3].style.backgroundColor = 'royalblue';
+
+                    items[0].style.left = -1500 + 'px';
+                    items[1].style.left = -1000 + 'px';
+                    items[2].style.left = -500 + 'px';
+                    items[3].style.left = 0 + 'px';
+
+                } else {
+                    if (index == 0) {
+                        items1[0].style.backgroundColor = 'royalblue';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 1) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';e
+                        items1[1].style.backgroundColor = 'royalblue';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 2) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'royalblue';
+                        items1[3].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                    }
+                    if (index == 3) {
+                        items1[0].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[1].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[2].style.backgroundColor = 'rgba(0,0,0,0.5)';
+                        items1[3].style.backgroundColor = 'royalblue';
+                    }
+                    for (var i = 0; i < items.length; i++) {
+                        var temp = parseInt(getComputedStyle(items[i]).left);
+                        //console.log(getComputedStyle(items[i]).left);
+                        items[i].style.left = temp + (500) + 'px';
+                    }
+                }
+                flag=1;
+            }
+        }
+
+        setInterval(function () { flag = 0; }, 1000);
+
+    </script>
+</body>
+
+</html>
