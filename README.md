@@ -6,15 +6,11 @@
 
 
 
-
-
-### Javascript
-
-放大镜
-
 ### JQuery
 
 [放大镜]()
+
+
 
 ### Ajax
 
@@ -30,7 +26,7 @@
 
 [阶段考试项目-后台界面](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/05-%E7%B2%A4%E5%B5%8C-BootStrap/%E9%98%B6%E6%AE%B5%E8%80%83%E8%AF%95%E9%A1%B9%E7%9B%AE/index.html)
 
-慕课-文档案例练习
+
 
 ### html5+css3
 
@@ -49,6 +45,4 @@
 [字体图标](http://htmlpreview.github.io/?https://github.com/zhiqiang404/Homework/blob/master/07-%E7%B2%A4%E5%B5%8C-svg/%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87.1.html)
 
 
-
-### less
 
