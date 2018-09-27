@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+}
+.view{
+    width:560px;
+    height:300px;
+    position:relative;
+    margin:100px auto;
+    /* transform:rotate3D(1,1,0,30deg); */
+	transform-style: preserve-3d;
+}
+.container{
+	width:560px;
+	height:300px;
+    position:absolute;
+    transform-style:preserve-3d;
+	transition:transform 0.2s;
+}
+.pic{
+	float:left;
+	width:140px;
+	height:300px;	height:300px;
+}
+/* 前面图片 */
+.container:nth-of-type(1)>.pic{
+    background:url('../images/q1.jpg') no-repeat;
+    float:left;
+    /* display:inline-block; */
+    transform:translateZ(150px);
+    transform-style:preserve-3d;
+}
+/* 顶部图片 */
+.container:nth-of-type(2)>.pic{
+    background:url('../images/q2.jpg') no-repeat;
+    /* 哪个轴上的百分百，相当于当前元素的宽或者高 */
+	/* 默认的旋转轴在元素对角线交点处 */
+    transform:translateY(-50%) rotateX(90deg);
+    transform-style:preserve-3d;
+}
+/* 后面图片 */
+.container:nth-of-type(3)>.pic{
+    background:url('../images/q3.jpg') no-repeat;
+    transform:translateZ(-150px) rotateX(180deg);;
+    transform-style:preserve-3d;
+}
+/* 底部图片 */
+.container:nth-of-type(4)>.pic{
+    background:url("../images/q4.jpg") no-repeat;
+    transform:translateY(50%) rotateX(-90deg);
+    transform-style:preserve-3d;
+}
+
+.left,.right{
+	width:50px;
+	height:50px;
+	background-color: rgba(0,0,0,0.5);
+	text-align:center;
+	line-height:50px;
+	font-size:30px;
+	color:#fff;
+	position:absolute;
+	text-decoration:none;
+}
+.left{
+	left:0;
+	top:50%;
+	transform:translate3D(0,-50%,150px);
+	cursor:default;
+
+}
+.right{
+	right:0;
+	top:50%;
+	transform:translate3D(0,-50%,150px);
+	cursor:default;
+}
+
+/* 这里是正确选中的:nth-of-type */
+/* 不会选中子元素，也不会选择元素，选择的好像是第一次满足类名条件的同等层次的数组； */
+/* .container:nth-of-type(1){	
+	border:1px solid red;
+}
+.container:nth-of-type(2){
+	border:1px solid blue;
+} */
