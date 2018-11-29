@@ -4,17 +4,23 @@
 	/*font-size:0px;*/
 	/* font-family: 'Noto Sans S Chinese'; */
 }
-/*第一章头部*/
+html,
+body{
+	width: 100%;
+	height: 100%;
+}
+
+/* 第一张 */
 .fir {
 	width: 100%;
 	/*height:100%，以最后一个不是绝对定位的元素为边界*/
-	height: 660px;
+	height: 100%;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/1.jpg) no-repeat 50% 50%/cover;
 	position: relative;
 	/*padding-top:40px;*/
 	overflow: hidden;
 }
-.fir-top {
+.fir .fir-top {
 	width: 1030px;
 	height: 60px;
 	position: relative;
@@ -25,17 +31,17 @@
 	color: #fff;
 }
 
-.fir-top-left {
+.fir .fir-top-left {
 	height: 26px;
 	width: 26px;
 	position: absolute;
 	left: 0px;
 	top: 50%;
 	transform: translateY(-50%);
-	background: url(../img/fir-top-left.png) no-repeat 50% 50%;
+	background: url(../img/fir-top-left.png) no-repeat 50% 50%/cover;
 }
 
-.fir-top-center {
+.fir .fir-top-center {
 	position: absolute;
 	/* overflow: hidden;*/
 	width: 500px;
@@ -47,7 +53,7 @@
 	text-align: center;
 }
 
-.fir-top-center>b {
+.fir .fir-top-center>b {
 	display: block;
 	font-size: 40px;
 	text-align: center;
@@ -55,21 +61,21 @@
 	margin: 0 auto;
 }
 
-.fir-top-center>b>b {
+.fir .fir-top-center>b>b {
 	font-weight: normal;
 	/*float:left;*/
 	font-size: 40px;
 	/*overflow: hidden;*/
 }
 
-.fir-top-center>div {
+.fir .fir-top-center>div {
 	width: 350px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
 }
 
-.fir-top-center>div>p {
+.fir .fir-top-center>div>p {
 	display: inline-block;
 	/*width:100px;*/
 	/*float:left;*/
@@ -82,7 +88,7 @@
 	/*text-align-last: justify;*/
 }
 
-.fir-top-right {
+.fir .fir-top-right {
 	height: 26px;
 	position: absolute;
 	right: 0px;
@@ -93,14 +99,16 @@
 	color: #fff;
 }
 
-.fir-top+hr {
+.fir .fir-top+hr {
 	width: 50px;
 	margin-top: 200px;
 	margin-left: auto;
 	margin-right: auto;
+	border:0px;
+	border-top: 1px solid #fff;
 }
 
-.fir-middle {
+.fir .fir-middle {
 	width: 700px;
 	text-align: center;
 	font-family: "Noto Serif CJK SC";
@@ -111,7 +119,7 @@
 	margin-right: auto;
 }
 
-.fir-middle+p {
+.fir .fir-middle+p {
 	margin-top: 30px;
 	text-align: center;
 	color: #fff;
@@ -119,7 +127,7 @@
 	opacity: 0.7;
 }
 
-.fir-bottom {
+.fir .fir-bottom {
 	width: 40px;
 	height: 40px;
 	position: absolute;
@@ -130,33 +138,25 @@
 }
 
 
-/*//第二张的样式*/
-
+/*第二张的样式*/
 .se {
 	width: 100%;
-	height: 660px;
+	height: 100%;
 	/*310px*/
 	color: #000;
 	font-family: "Noto Sans S Chinese";
 	overflow: hidden;
-	/*padding-top:60px;*/
-	/*position:relative;*/
 }
 
 .se>div {
-	/*display:inline-block;*/
 	width: 1000px;
 	height: 500px;
-	/*250px*/
-	/*margin-top:60px;*/
-	margin-top: 60px;
+	
+	margin-top: 8%;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	/*position:absolute;*/
-	/*left:50%;
-	top:50%;
-	transform:translate(-50%,-50%);*/
+
 }
 
 .se-left {
@@ -189,13 +189,6 @@
 	font-size: 14px;
 	margin-bottom: 10px;
 }
-/*.se-left:before{
-	content: '';
-	display:block;
-	width:15px;
-	height:15px;
-	background:url(img/se-left.png) no-repeat 50% 50%/cover;
-}*/
 
 .se-right {
 	position: absolute;
@@ -249,16 +242,14 @@
 /* 第三张 */
 .th{
 	width:100%;
-	height:660px;
-	/* 330 */
+	height:100%;
 	overflow: hidden;
 	background:url(../img/th.jpg) no-repeat 50% 50%/cover;
 }
 .th-container{
 	width:1200px;
 	height:600px;
-	/* 300 */
-	margin-top:30px;
+	margin-top:8%;
 	margin-left:auto;
 	margin-right:auto;
 	position:relative;
@@ -270,11 +261,6 @@
 	float:left;
 	position:relative;
 	background-color:rgba(255,255,255,0.1);
-	/* opacity:0.2; */
-	 /*?background简写，position和cover、contain的用法 */
-	/* background:linear-gradient(to bottom,rgba(255,255,255,0.1),rgba(255,255,255,0.1))
-	,url(../img/th.jpg) no-repeat -120px -40px; */
-	/* filter:blur(15px); */
 }
 .th-left-top>ul{
 	list-style:none;
@@ -293,7 +279,7 @@
 	opacity: 0.5;
 	float:left;
 	margin-right:10px;
-	margin-top:37px;
+	margin-top:26px;
 }
 .th-left-top>ul>ul{
 	float:left;
@@ -319,12 +305,11 @@
 }
 .th-right-bottom{
 	height:25px;
-	width:75px;
+	width:125px;
 	text-align: center;
 	position: absolute;
 	right:0px;
 	bottom:0px;
-	/* background-color: #000000; */
 	opacity:0.5;
 }
 .th-right-bottom>img{
@@ -335,7 +320,7 @@
 /* 第四页 */
 .fo{
 	width:100%;
-	height:660px;
+	height:100%;
 	overflow: hidden;
 }
 .fo-container{
@@ -344,7 +329,7 @@
 	/* 公版高：660px;宽：1050px */
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:30px;
+	margin-top:8%;
 }
 .fo-left{
 	width:250px;
@@ -373,12 +358,11 @@
 }
 .fo-left-top>ul>b{
 	width:10px;
-	display:inline-block;
 	float:left;
 	/* margin-top:50px; */
 	color:#fff;
 	margin-right:10px;
-	margin-top:75px;
+	margin-top:58px;
 }
 .fo-left-top>ul>ul{
 	list-style: none;
@@ -421,7 +405,7 @@
 /* 第五张 */
 .fif{
 	width:100%;
-	height:660px;
+	height:100%;
 	background:linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url(../img/fif.jpg) no-repeat 50% 50%/cover;
 	/* 原图是三角形逐渐收缩，设置一个从上往下的渐变 */
 	position: relative;
@@ -458,8 +442,8 @@
 
 /* 第6张 */
 .six{
-	height:660px;
 	width:100%;
+	height:100%;
 	overflow: hidden;
 }
 .six-container{
@@ -467,7 +451,7 @@
 	width:1200px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:30px;
+	margin-top:8%;
 	position:relative;
 	overflow: hidden;
 }
@@ -568,7 +552,7 @@
 /* 第7张 */
 .seventh{
 	width:100%;
-	height:660px;
+	height:100%;
 	background:url(../img/seventh.png) no-repeat 50% 50%/cover;
 	/* position:relative; */
 	overflow:hidden;
@@ -580,7 +564,7 @@
 	/* position: absolute; */
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:30px;
+	margin-top:8%;
 	position: relative;
 }
 
@@ -602,7 +586,7 @@
 	float:left;
 	width:10px;
 	margin-right:10px;
-	margin-top:150px;
+	margin-top:112px;
 }
 .seventh-left-top>div>ul{
 	float:left;
@@ -665,7 +649,7 @@
 /* 第8张 */
 .eighth{
 	width:100%;
-	height:660px;
+	height:100%;
 	/* 330 */
 	overflow: hidden;
 	background-color:rgb(242, 242, 242);
@@ -677,7 +661,7 @@
 	/* 250 */
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:40px;
+	margin-top:8%;
 	position:relative;
 }
 .eighth-left{

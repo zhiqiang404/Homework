@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前台界面</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <script src="../public/js/jquery-3.3.1.js"></script>
+    <script src="../public/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-center">To Do List</h2>
+
+        <!-- 输入框 -->
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">添加</button>
+            </span>
+        </div>
+        <hr>
+
+        <!-- 面板 -->
+        <div class="panel panel-success">
+            <div class="panel-heading">代办事项标注区</div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Cras justo odio
+                        <div class="btn-group pull-right">
+                            <!-- //分成三个表单才有3个不同的action -->
+                            <form action="/finish" method="POST" class="btn-group ">
+                                <button class="btn btn-danger glyphicon glyphicon-ok"></button>
+                            </form>
+                            <form action="/edit" method="POST" class="btn-group ">
+                                <button class="btn btn-default glyphicon glyphicon-edit"></button>
+                            </form>
+                            <form action="/delete" method="POST" class="btn-group   ">
+                                <button class="btn btn-default glyphicon glyphicon-trash"></button>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        Cras justo odio
+                        <div class="btn-group pull-right">
+                            <!-- //分成三个表单才有3个不同的action -->
+                            <form action="/finish" method="POST" class="btn-group ">
+                                <button class="btn btn-danger glyphicon glyphicon-ok"></button>
+                            </form>
+                            <form action="/edit" method="POST" class="btn-group ">
+                                <button class="btn btn-default glyphicon glyphicon-edit"></button>
+                            </form>
+                            <form action="/delete" method="POST" class="btn-group   ">
+                                <button class="btn btn-default glyphicon glyphicon-trash"></button>
+                            </form>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <span>共<b>X</b>项</span>/
+                <span>共<b>X</b>项</span>/
+                <span>共<b>X</b>项</span>/
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <!-- 只要在表单中就能提交 -->
+            <form class="modal-content" action="/edit" method="POST">
+                <!-- 头部 -->
+                <div class="modal-header">
+                    <!-- 删除按钮 -->
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">内容修改</h4>
+                </div>
+                <!-- 身体 -->
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="请填入修改内容">
+                </div>
+                <!-- 脚部 -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
